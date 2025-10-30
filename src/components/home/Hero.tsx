@@ -95,7 +95,7 @@ const Hero = () => {
               {/* Image container with blob border-radius and outline */}
               <div className="relative w-full h-full animate-blob-morph overflow-hidden border-4 border-cyber-purple/40 shadow-[0_0_30px_rgba(20,184,166,0.3)]">
                 <img 
-                  src="./pfp.png" 
+                  src="/Portfolio/pfp.png" 
                   alt="Cameron Price" 
                   className="w-full h-full object-cover"
                 />

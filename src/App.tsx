@@ -33,7 +33,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/Portfolio">
         <ScrollToTop />
         <div className="min-h-screen flex flex-col bg-cyber-dark text-white">
           <Navbar />

@@ -13,7 +13,9 @@
     // This script takes the current URL and converts the path and query
     // string into just a query string, and then redirects the browser
     // to the new URL with only a query string and hash fragment.
-    var pathSegmentsToKeep = 0;
+    // For GitHub Pages repos at username.github.io/repo-name, set to 1
+    // For GitHub Pages at username.github.io (root), set to 0
+    var pathSegmentsToKeep = 1;
 
     var l = window.location;
     l.replace(

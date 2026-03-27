@@ -16,43 +16,43 @@ const Projects = () => {
       const projectsData: Project[] = [
         {
           id: '1',
-          title: 'Personal Cybersecurity Lab',
-          description: 'Home lab for penetration testing and security research.',
+          title: 'Vulnerability Management',
+          description: 'I identify and assess system vulnerabilities using enterprise tools like Tenable and Azure.',
           image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop',
-          tags: ['Cybersecurity', 'VirtualBox', 'VMware'],
-          details: 'Built home cybersecurity lab using VirtualBox and VMware for safe testing environments. Configured multiple virtual machines with various operating systems for penetration testing practice. Implemented network segmentation and firewall rules to simulate enterprise security environments.'
+          tags: ['Cybersecurity', 'Tenable', 'Azure'],
+          details: 'I turn raw scan data into clear security steps that reduce the overall attack surface. Using enterprise vulnerability scanning tools like Tenable and Azure, I analyze environments and provide actionable insights to strengthen security postures. This systematic approach helps organizations prioritize and remediate vulnerabilities effectively.'
         },
         {
           id: '2',
-          title: 'National Cyber League (NCL) Competitions',
-          description: 'Competitive cybersecurity challenges and CTF participation.',
+          title: 'STIGs and System Hardening',
+          description: 'I apply Security Technical Implementation Guides (STIGs) to IT infrastructure.',
           image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop',
-          tags: ['Cybersecurity', 'OSINT', 'Cryptography'],
-          details: 'Actively participate in National Cyber League (NCL) competitions, demonstrating practical cybersecurity skills in time-constrained environments. Completed advanced challenges in Open Source Intelligence (OSINT), Cryptography, and Network Traffic Analysis. Utilize industry-standard tools including Wireshark for packet analysis and network security investigation. Maintained top 25% ranking in regional cybersecurity competitions.'
+          tags: ['Compliance', 'STIGs', 'Security'],
+          details: 'I ensure systems meet strict compliance standards by applying Security Technical Implementation Guides (STIGs) and locking down configurations to prevent unauthorized access. This systematic approach to security hardening protects critical infrastructure and ensures adherence to government and industry security requirements.'
         },
         {
           id: '3',
-          title: 'Premiere Pro Auto Edit System',
-          description: 'Automation tools for video editing workflows.',
+          title: 'Threat Hunting',
+          description: 'I proactively search for hidden threats on live servers and platforms.',
           image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop',
-          tags: ['Development', 'JavaScript', 'Agile'],
-          details: 'Developed automation tools for Premiere Pro and After Effects using JavaScript, HTML, and CSS. Applied Agile methodology (Plan, Design, Develop, Test, Deploy, Review) throughout the development process. Utilized scripts from GitHub and customized them for specific video editing workflows.'
+          tags: ['Threat Detection', 'Cyber Range', 'Defense'],
+          details: 'I use command-line tools and log analysis to find potential compromises early, rather than waiting for automated alerts. This proactive approach to threat hunting on live servers and platforms like The Cyber Range helps identify and neutralize threats before they cause significant damage.'
         },
         {
           id: '4',
-          title: 'Unity Game Development',
-          description: 'Game development projects using Unity engine.',
-          image: 'https://images.unsplash.com/photo-1538849527685-75c9f89ce685?q=80&w=1936&auto=format&fit=crop',
-          tags: ['Game Development', 'Unity', 'Programming'],
-          details: 'Created multiple games using Unity game engine, demonstrating programming skills, problem-solving abilities, and understanding of game mechanics. Developed interactive gameplay systems and user interfaces.'
+          title: 'Cybersecurity Internship',
+          description: 'Actively applying security concepts in real-world business environments.',
+          image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop',
+          tags: ['Professional Experience', 'Security Operations', 'IAM'],
+          details: 'Currently working as a Cybersecurity Intern where I actively apply security concepts in real-world business environments. Gaining hands-on experience with user access management, security policy implementation, and enterprise security operations while working towards becoming an IAM Engineer.'
         },
         {
           id: '5',
-          title: 'Digital Marketing Analytics',
-          description: 'Data analysis for marketing campaigns at Leap.',
-          image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop',
-          tags: ['Data Analysis', 'Marketing', 'Excel'],
-          details: 'Analyzed social media data and web analytics to identify content trends and inform strategic marketing decisions. Maintained and updated comprehensive database of potential influencer partners using Excel and CRM tools. Prepared detailed reports on key performance indicators (KPIs) to measure campaign effectiveness and ROI.'
+          title: 'Security Automation Tools',
+          description: 'Building automation tools to secure systems and streamline security operations.',
+          image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop',
+          tags: ['Automation', 'Security', 'Development'],
+          details: 'Developing custom automation tools to enhance security operations and streamline repetitive security tasks. These tools help improve efficiency in vulnerability management, log analysis, and security monitoring while maintaining best practices for secure coding and deployment.'
         }
       ];
       
@@ -88,7 +88,7 @@ const Projects = () => {
             <span className="text-glow">Projects</span>
           </h1>
           <p className="text-gray-300 max-w-3xl mx-auto text-center">
-            Explore my portfolio of projects demonstrating expertise in cybersecurity, software development, and system architecture.
+            Explore my portfolio of projects demonstrating expertise in identity and access management, vulnerability management, and security automation.
           </p>
         </div>
       </div>

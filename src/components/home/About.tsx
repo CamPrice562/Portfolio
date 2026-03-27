@@ -31,11 +31,11 @@ const About = () => {
   }, []);
   
   const skills = [
-    { name: "Network Security", level: 85 },
-    { name: "System Administration", level: 80 },
-    { name: "Python & Java", level: 85 },
-    { name: "Cybersecurity Tools", level: 80 },
-    { name: "Hardware Troubleshooting", level: 90 },
+    { name: "Identity & Access Management", level: 85 },
+    { name: "Vulnerability Management", level: 80 },
+    { name: "Security Automation", level: 85 },
+    { name: "System Hardening (STIGs)", level: 80 },
+    { name: "Threat Hunting", level: 75 },
   ];
   
   return (
@@ -50,20 +50,20 @@ const About = () => {
           
           <div className="space-y-4 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
             <p className="text-gray-300 text-lg">
-              I am a Computer Science student at Southern New Hampshire University with a strong foundation in cybersecurity principles and hands-on experience in network security, hardware troubleshooting, and system administration. I actively participate in National Cyber League (NCL) competitions, demonstrating practical cybersecurity skills in time-constrained environments.
+              I am a Cybersecurity Intern pursuing a Bachelor of Science in Computer Science at Southern New Hampshire University, with a CompTIA Security+ certification and a clear goal of becoming an Identity and Access Management (IAM) Engineer. I actively apply security concepts in real-world business environments and build automation tools to secure systems.
             </p>
             <p className="text-gray-300 text-lg">
-              I have built a personal cybersecurity lab using VirtualBox and VMware for safe testing environments, where I regularly practice with vulnerable applications and Capture-the-Flag (CTF) challenges. My goal is to apply my technical problem-solving abilities in protecting organizational systems and data.
+              My expertise includes vulnerability management using enterprise tools like Tenable and Azure, applying Security Technical Implementation Guides (STIGs) for system hardening, and proactive threat hunting on live servers. I turn raw security data into actionable insights and ensure systems meet strict compliance standards while practicing hands-on defense on platforms like The Cyber Range.
             </p>
             
             <div className="flex items-center justify-center space-x-8 mt-8">
               <div className="flex flex-col items-center">
-                <span className="text-cyber-green font-bold text-3xl">Top 25%</span>
-                <span className="text-gray-400 text-sm">NCL Ranking</span>
+                <span className="text-cyber-green font-bold text-3xl">Security+</span>
+                <span className="text-gray-400 text-sm">CompTIA Certified</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-cyber-purple font-bold text-3xl">2026</span>
-                <span className="text-gray-400 text-sm">Graduation</span>
+                <span className="text-cyber-purple font-bold text-3xl">IAM</span>
+                <span className="text-gray-400 text-sm">Career Focus</span>
               </div>
               <div className="flex flex-col items-center">
                 <span className="text-cyber-green font-bold text-3xl">Multiple</span>

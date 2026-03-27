@@ -11,27 +11,27 @@ const Index = () => {
   const featuredProjects: Project[] = [
     {
       id: '1',
-      title: 'Personal Cybersecurity Lab',
-      description: 'Home lab for penetration testing and security research.',
+      title: 'Vulnerability Management',
+      description: 'I identify and assess system vulnerabilities using enterprise tools like Tenable and Azure.',
       image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop',
-      tags: ['Cybersecurity', 'VirtualBox', 'VMware'],
-      details: 'Built home cybersecurity lab using VirtualBox and VMware for safe testing environments. Configured multiple virtual machines with various operating systems for penetration testing practice.'
+      tags: ['Cybersecurity', 'Tenable', 'Azure'],
+      details: 'I turn raw scan data into clear security steps that reduce the overall attack surface. Using enterprise vulnerability scanning tools, I analyze environments and provide actionable insights to strengthen security postures.'
     },
     {
       id: '2',
-      title: 'National Cyber League (NCL) Competitions',
-      description: 'Competitive cybersecurity challenges and CTF participation.',
+      title: 'STIGs and System Hardening',
+      description: 'I apply Security Technical Implementation Guides (STIGs) to IT infrastructure.',
       image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop',
-      tags: ['Cybersecurity', 'OSINT', 'Cryptography'],
-      details: 'Actively participate in National Cyber League (NCL) competitions. Completed advanced challenges in OSINT, Cryptography, and Network Traffic Analysis. Maintained top 25% ranking in regional competitions.'
+      tags: ['Compliance', 'STIGs', 'Security'],
+      details: 'I ensure systems meet strict compliance standards by applying STIGs and locking down configurations to prevent unauthorized access. This systematic approach to security hardening protects critical infrastructure.'
     },
     {
       id: '3',
-      title: 'Premiere Pro Auto Edit System',
-      description: 'Automation tools for video editing workflows.',
+      title: 'Threat Hunting',
+      description: 'I proactively search for hidden threats on live servers and platforms.',
       image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop',
-      tags: ['Development', 'JavaScript', 'Agile'],
-      details: 'Developed automation tools for Premiere Pro and After Effects using JavaScript, HTML, and CSS. Applied Agile methodology throughout the development process.'
+      tags: ['Threat Detection', 'Cyber Range', 'Defense'],
+      details: 'I use command-line tools and log analysis to find potential compromises early, rather than waiting for automated alerts. This proactive approach to threat hunting helps identify and neutralize threats before they cause damage.'
     }
   ];
   
@@ -54,7 +54,7 @@ const Index = () => {
                 Featured <span className="text-glow">Projects</span>
               </h2>
               <p className="mt-2 text-gray-400">
-                Showcasing my expertise in cybersecurity implementation
+                Showcasing my expertise in identity and access management
               </p>
             </div>
             
@@ -81,10 +81,10 @@ const Index = () => {
         
         <div className="cyber-container relative z-10 text-center">
           <h2 className="font-tech text-3xl font-bold text-white mb-6 mx-auto max-w-3xl">
-            Ready to Secure Your <span className="text-glow">Digital Assets</span>?
+            Ready to Secure Your <span className="text-glow">Identity Infrastructure</span>?
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's work together to protect your organization from cyber threats with tailored security solutions.
+            Let's work together to implement robust IAM solutions and protect your organization's digital assets with comprehensive access control strategies.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact" className="btn-cyber">

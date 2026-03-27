@@ -61,7 +61,7 @@ const Hero = () => {
             </h1>
             
             <p className="mt-6 text-lg text-gray-300">
-              Hi, I'm Cameron! I'm a Computer Science student at Southern New Hampshire University with a passion for cybersecurity. Welcome to my portfolio!
+              Cybersecurity Intern and CompTIA Security+ certified professional specializing in Identity and Access Management. I build automation tools to secure systems and practice hands-on defense on platforms like The Cyber Range.
             </p>
             
             <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -81,7 +81,7 @@ const Hero = () => {
                 <div className="w-10 h-10 rounded-full bg-cyber-purple/20 text-cyber-purple flex items-center justify-center text-xs font-bold"></div>
                 <div className="w-10 h-10 rounded-full bg-cyber-green/20 text-cyber-green flex items-center justify-center text-xs font-bold"></div>
               </div>
-              <span className="ml-4 text-sm text-gray-400">Aspiring Cybersecurity Professional</span>
+              <span className="ml-4 text-sm text-gray-400">Aspiring IAM Engineer</span>
             </div>
           </div>
           
@@ -112,8 +112,8 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
             </div>
-            <h3 className="text-xl font-tech font-semibold text-white mb-2">Network Security</h3>
-            <p className="text-gray-400 text-sm">Hands-on experience with network security analysis using Wireshark, Nmap, and security auditing tools.</p>
+            <h3 className="text-xl font-tech font-semibold text-white mb-2">Identity & Access Management</h3>
+            <p className="text-gray-400 text-sm">Specializing in user access control, authentication systems, and security policy implementation.</p>
           </div>
           
           <div className="card-cyber p-6">
@@ -122,8 +122,8 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            <h3 className="text-xl font-tech font-semibold text-white mb-2">System Administration</h3>
-            <p className="text-gray-400 text-sm">Proficient in Active Directory, user management, system hardening, and group policy configuration.</p>
+            <h3 className="text-xl font-tech font-semibold text-white mb-2">Security Automation</h3>
+            <p className="text-gray-400 text-sm">Building automation tools to secure systems and streamline security operations.</p>
           </div>
           
           <div className="card-cyber p-6">
@@ -132,8 +132,8 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
               </svg>
             </div>
-            <h3 className="text-xl font-tech font-semibold text-white mb-2">Cybersecurity Lab</h3>
-            <p className="text-gray-400 text-sm">Built personal cybersecurity lab for penetration testing practice and vulnerability research.</p>
+            <h3 className="text-xl font-tech font-semibold text-white mb-2">CompTIA Security+</h3>
+            <p className="text-gray-400 text-sm">Certified professional with hands-on defense experience on The Cyber Range platform.</p>
           </div>
         </div>
       </div>

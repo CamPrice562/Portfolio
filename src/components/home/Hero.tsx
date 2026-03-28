@@ -26,22 +26,64 @@ const Hero = () => {
   return (
     <section ref={heroRef} className="relative min-h-screen flex items-center py-20 overflow-hidden bg-cyber-dark">
       {/* Background decoration */}
-      <div className="absolute inset-0 cyber-grid z-0 opacity-20"></div>
-      <div className="absolute inset-0 bg-hero-glow z-0"></div>
+      <div 
+        className="absolute inset-0 cyber-grid z-0 opacity-20"
+        style={{
+          transform: `translateY(${scrollY * 0.1}px)`,
+          transition: 'transform 0.1s ease-out'
+        }}
+      ></div>
+      <div 
+        className="absolute inset-0 bg-hero-glow z-0"
+        style={{
+          transform: `translateY(${scrollY * 0.15}px)`,
+          transition: 'transform 0.1s ease-out'
+        }}
+      ></div>
       
-      <div className="cyber-container relative z-10 pt-20">
+      <div 
+        className="cyber-container relative z-10 pt-20"
+        style={{
+          transform: `translateY(${scrollY * 0.2}px)`,
+          transition: 'transform 0.1s ease-out'
+        }}
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
           {/* Left side - Text content */}
-          <div className={`transition-all duration-1000 transform text-center lg:text-left ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="font-tech font-bold text-4xl sm:text-5xl md:text-6xl leading-tight">
+          <div 
+            className={`transition-all duration-1000 transform text-center lg:text-left ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}
+            style={{
+              transform: `translateY(${scrollY * 0.25}px)`,
+              transition: 'transform 0.1s ease-out'
+            }}
+          >
+            <h1 
+              className="font-tech font-bold text-4xl sm:text-5xl md:text-6xl leading-tight"
+              style={{
+                transform: `translateY(${scrollY * 0.3}px)`,
+                transition: 'transform 0.1s ease-out'
+              }}
+            >
               <span className="text-white block">Cameron Price</span>
             </h1>
             
-            <p className="mt-6 text-lg text-gray-300">
+            <p 
+              className="mt-6 text-lg text-gray-300"
+              style={{
+                transform: `translateY(${scrollY * 0.35}px)`,
+                transition: 'transform 0.1s ease-out'
+              }}
+            >
               Cybersecurity Intern and CompTIA Security+ certified professional specializing in Identity and Access Management. I build automation tools to secure systems and practice hands-on defense on platforms like The Cyber Range.
             </p>
             
-            <div className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start">
+            <div 
+              className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start"
+              style={{
+                transform: `translateY(${scrollY * 0.4}px)`,
+                transition: 'transform 0.1s ease-out'
+              }}
+            >
               <Link to="/projects" className="btn-cyber group">
                 <span>View Projects</span>
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -54,7 +96,13 @@ const Hero = () => {
           </div>
           
           {/* Right side - Animated blob image */}
-          <div className={`flex justify-center transition-all duration-1000 delay-300 transform ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
+          <div 
+            className={`flex justify-center transition-all duration-1000 delay-300 transform ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}
+            style={{
+              transform: `translateY(${scrollY * 0.5}px)`,
+              transition: 'transform 0.1s ease-out'
+            }}
+          >
             <div 
               ref={imageRef}
               className="relative w-80 h-80"
@@ -64,15 +112,31 @@ const Hero = () => {
               }}
             >
               {/* Animated blob shape with glow */}
-              <div className="absolute inset-0 animate-blob">
+              <div 
+                className="absolute inset-0 animate-blob"
+                style={{
+                  transform: `translateY(${scrollY * 0.2}px)`,
+                  transition: 'transform 0.1s ease-out'
+                }}
+              >
                 <div className="w-full h-full bg-gradient-to-br from-cyber-purple/30 to-cyber-green/30 blur-xl rounded-full"></div>
               </div>
               {/* Image container with blob border-radius and outline */}
-              <div className="relative w-full h-full animate-blob-morph overflow-hidden border-4 border-cyber-purple/40 shadow-[0_0_30px_rgba(20,184,166,0.3)]">
+              <div 
+                className="relative w-full h-full animate-blob-morph overflow-hidden border-4 border-cyber-purple/40 shadow-[0_0_30px_rgba(20,184,166,0.3)]"
+                style={{
+                  transform: `translateY(${scrollY * 0.1}px)`,
+                  transition: 'transform 0.1s ease-out'
+                }}
+              >
                 <img 
                   src={`${import.meta.env.BASE_URL}pfp.png`}
                   alt="Cameron Price" 
                   className="w-full h-full object-cover"
+                  style={{
+                    transform: `translateY(${scrollY * 0.05}px)`,
+                    transition: 'transform 0.1s ease-out'
+                  }}
                 />
               </div>
             </div>

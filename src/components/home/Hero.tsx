@@ -22,42 +22,6 @@ const Hero = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-    
-    // Optional: Create matrix rain effect
-    const createMatrixRain = () => {
-      const container = document.createElement('div');
-      container.className = 'matrix-rain';
-      document.body.appendChild(container);
-      
-      const width = window.innerWidth;
-      
-      // Create columns
-      for (let i = 0; i < width / 20; i++) {
-        const column = document.createElement('div');
-        column.className = 'matrix-column';
-        column.style.left = `${Math.random() * width}px`;
-        column.style.animationDuration = `${Math.random() * 10 + 10}s`;
-        
-        // Create random matrix characters
-        for (let j = 0; j < 20; j++) {
-          const char = document.createElement('div');
-          char.textContent = String.fromCharCode(0x30A0 + Math.random() * 96);
-          char.style.opacity = `${Math.random() * 0.5 + 0.5}`;
-          column.appendChild(char);
-        }
-        
-        container.appendChild(column);
-      }
-      
-      return () => {
-        document.body.removeChild(container);
-      };
-    };
-    
-    // Uncomment if you want the matrix effect
-    // const cleanup = createMatrixRain();
-    // return cleanup;
-  }, []);
   
   return (
     <section ref={heroRef} className="relative min-h-screen flex items-center py-20 overflow-hidden bg-cyber-dark">

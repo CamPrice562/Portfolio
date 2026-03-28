@@ -58,16 +58,6 @@ const Contact = () => {
                   
                   <div className="flex">
                     <div className="flex-shrink-0 w-12 h-12 rounded-md bg-cyber-green/10 text-cyber-green flex items-center justify-center mr-4">
-                      <Phone size={24} />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <h3 className="text-white font-medium mb-1 text-sm">Phone</h3>
-                      <p className="text-gray-400 text-sm">562-253-3505</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-md bg-cyber-green/10 text-cyber-green flex items-center justify-center mr-4">
                       <Clock size={24} />
                     </div>
                     <div className="min-w-0 flex-1">

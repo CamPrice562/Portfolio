@@ -5,10 +5,23 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     setIsVisible(true);
+    
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
     
     // Optional: Create matrix rain effect
     const createMatrixRain = () => {
@@ -78,7 +91,14 @@ const Hero = () => {
           
           {/* Right side - Animated blob image */}
           <div className={`flex justify-center transition-all duration-1000 delay-300 transform ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-            <div className="relative w-80 h-80">
+            <div 
+              ref={imageRef}
+              className="relative w-80 h-80"
+              style={{
+                transform: `translateY(${scrollY * 0.3}px)`,
+                transition: 'transform 0.1s ease-out'
+              }}
+            >
               {/* Animated blob shape with glow */}
               <div className="absolute inset-0 animate-blob">
                 <div className="w-full h-full bg-gradient-to-br from-cyber-purple/30 to-cyber-green/30 blur-xl rounded-full"></div>

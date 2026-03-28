@@ -40,19 +40,11 @@ const Projects = () => {
         },
         {
           id: '4',
-          title: 'Cybersecurity Internship',
-          description: 'Actively applying security concepts in real-world business environments.',
-          image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop',
-          tags: ['Professional Experience', 'Security Operations', 'IAM'],
-          details: 'Currently working as a Cybersecurity Intern where I actively apply security concepts in real-world business environments. Gaining hands-on experience with user access management, security policy implementation, and enterprise security operations while working towards becoming an IAM Engineer.'
-        },
-        {
-          id: '5',
-          title: 'Security Automation Tools',
-          description: 'Building automation tools to secure systems and streamline security operations.',
+          title: 'Enterprise Security Operations',
+          description: 'Real-world experience with enterprise security tools including Tenable, MDE, and Azure.',
           image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop',
-          tags: ['Automation', 'Security', 'Development'],
-          details: 'Developing custom automation tools to enhance security operations and streamline repetitive security tasks. These tools help improve efficiency in vulnerability management, log analysis, and security monitoring while maintaining best practices for secure coding and deployment.'
+          tags: ['Enterprise Security', 'Tenable', 'MDE', 'Azure'],
+          details: 'Gaining hands-on experience with enterprise security tools in real-world environments. Working with Tenable for vulnerability management and scanning, utilizing Microsoft Defender for Endpoint (MDE) for threat detection and response, and implementing Azure cloud security configurations. This practical experience includes applying security policies, managing alerts, and responding to incidents in enterprise-like settings.'
         }
       ];
       

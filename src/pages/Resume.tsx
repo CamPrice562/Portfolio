@@ -11,6 +11,19 @@ const Resume = () => {
   const resumeData = {
     experience: [
       {
+        title: "Cybersecurity Intern",
+        company: "The Cyber Range",
+        period: "2025 - Present",
+        description: "Gaining hands-on cybersecurity experience with enterprise security tools and real-world threat scenarios.",
+        achievements: [
+          "Work with enterprise security tools including Tenable for vulnerability management",
+          "Utilize Microsoft Defender for Endpoint (MDE) for threat detection and response",
+          "Gain practical experience with Azure cloud security services and configurations",
+          "Practice threat hunting and incident response in controlled environment",
+          "Apply security policies and procedures in enterprise-like settings"
+        ]
+      },
+      {
         title: "Digital Marketing Intern",
         company: "Leap - Remote Position",
         period: "June 2025 - September 2025",
@@ -67,7 +80,7 @@ const Resume = () => {
     ],
     certifications: [
       "CompTIA A+ (Expected November 2025)",
-      "CompTIA Security+ (Expected November 2025)",
+      "CompTIA Security+",
       "Certificate of Achievement: Computer Hardware Technician (Long Beach City College)",
       "IT Essentials Certification (Cisco Networking Academy)",
       "Microsoft Technology Associate (MTA): JavaScript Fundamentals"

@@ -74,15 +74,6 @@ const Hero = () => {
               </Link>
             </div>
             
-            <div className="mt-8 flex items-center justify-center lg:justify-start">
-              <div className="flex -space-x-2">
-                {/* Certification badges or client logos could go here */}
-                <div className="w-10 h-10 rounded-full bg-cyber-green/20 text-cyber-green flex items-center justify-center text-xs font-bold"></div>
-                <div className="w-10 h-10 rounded-full bg-cyber-purple/20 text-cyber-purple flex items-center justify-center text-xs font-bold"></div>
-                <div className="w-10 h-10 rounded-full bg-cyber-green/20 text-cyber-green flex items-center justify-center text-xs font-bold"></div>
-              </div>
-              <span className="ml-4 text-sm text-gray-400">Aspiring IAM Engineer</span>
-            </div>
           </div>
           
           {/* Right side - Animated blob image */}
@@ -101,39 +92,6 @@ const Hero = () => {
                 />
               </div>
             </div>
-          </div>
-        </div>
-        
-        {/* Stats or features */}
-        <div className={`mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-500 transform ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
-          <div className="card-cyber p-6">
-            <div className="h-12 w-12 rounded-md bg-cyber-green/10 text-cyber-green flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-tech font-semibold text-white mb-2">Identity & Access Management</h3>
-            <p className="text-gray-400 text-sm">Specializing in user access control, authentication systems, and security policy implementation.</p>
-          </div>
-          
-          <div className="card-cyber p-6">
-            <div className="h-12 w-12 rounded-md bg-cyber-purple/10 text-cyber-purple flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-tech font-semibold text-white mb-2">Security Automation</h3>
-            <p className="text-gray-400 text-sm">Building automation tools to secure systems and streamline security operations.</p>
-          </div>
-          
-          <div className="card-cyber p-6">
-            <div className="h-12 w-12 rounded-md bg-cyber-green/10 text-cyber-green flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-tech font-semibold text-white mb-2">CompTIA Security+</h3>
-            <p className="text-gray-400 text-sm">Certified professional with hands-on defense experience on The Cyber Range platform.</p>
           </div>
         </div>
       </div>

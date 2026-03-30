@@ -13,9 +13,9 @@ const Hero = () => {
   
   const words = [
     'Cybersecurity Intern',
-    'CompTIA Security+ Certified',
-    'IAM Engineer in Training',
-    'Security Automation Builder'
+    'Security+ Certified',
+    'IAM Engineer',
+    'Automation Builder'
   ];
   
   const fullText = 'Cybersecurity Intern and CompTIA Security+ certified professional specializing in Identity and Access Management. I build automation tools to secure systems and practice hands-on defense on platforms like The Cyber Range.';
@@ -28,15 +28,17 @@ const Hero = () => {
       
       const typeInterval = setInterval(() => {
         if (charIndex <= currentWord.length) {
-          setTypedText(words.slice(0, currentWordIndex + 1).join(' ') + ' ' + currentWord.slice(0, charIndex));
+          setTypedText(currentWord.slice(0, charIndex));
           charIndex++;
         } else {
           clearInterval(typeInterval);
           setTimeout(() => {
-            setCurrentWordIndex(currentWordIndex + 1);
-          }, 1000);
+            if (currentWordIndex < words.length - 1) {
+              setCurrentWordIndex(currentWordIndex + 1);
+            }
+          }, 2000);
         }
-      }, 100);
+      }, 150);
       
       return () => clearInterval(typeInterval);
     }
@@ -119,7 +121,7 @@ const Hero = () => {
               <span className="text-white block">Cameron Price</span>
             </h1>
             
-            <div className="mt-4 sm:mt-6 h-8 sm:h-10">
+            <div className="mt-4 sm:mt-6 h-6 sm:h-8">
               <p className="text-sm sm:text-base lg:text-lg text-cyber-purple font-medium animate-pulse">
                 {typedText || '|'}
               </p>

@@ -178,10 +178,10 @@ const Resume = () => {
                     </div>
                     <div className="text-cyber-purple font-medium mb-4">{job.company}</div>
                     <p className="text-gray-300 mb-4">{job.description}</p>
-                    <h4 className="text-white font-medium mb-2">Key Achievements:</h4>
-                    <ul className="list-disc list-inside text-gray-300 space-y-1">
+                    <h4 className="text-white font-medium mb-3">Key Achievements:</h4>
+                    <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
                       {job.achievements.map((achievement, i) => (
-                        <li key={i}>{achievement}</li>
+                        <li key={i} className="pl-2">{achievement}</li>
                       ))}
                     </ul>
                   </div>
@@ -240,10 +240,10 @@ const Resume = () => {
                     <p className="text-gray-300 mb-4">{activity.description}</p>
                     {activity.achievements && (
                       <div>
-                        <h4 className="text-white font-medium mb-2">Key Achievements:</h4>
-                        <ul className="list-disc list-inside text-gray-300 space-y-1">
+                        <h4 className="text-white font-medium mb-3">Key Achievements:</h4>
+                        <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
                           {activity.achievements.map((achievement, i) => (
-                            <li key={i}>{achievement}</li>
+                            <li key={i} className="pl-2">{achievement}</li>
                           ))}
                         </ul>
                       </div>

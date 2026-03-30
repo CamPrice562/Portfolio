@@ -55,21 +55,6 @@ const About = () => {
             <p className="text-gray-300 text-lg">
               My expertise includes vulnerability management using enterprise tools like Tenable and Azure, applying Security Technical Implementation Guides (STIGs) for system hardening, and proactive threat hunting on live servers. I turn raw security data into actionable insights and ensure systems meet strict compliance standards while practicing hands-on defense on platforms like The Cyber Range.
             </p>
-            
-            <div className="flex items-center justify-center space-x-8 mt-8">
-              <div className="flex flex-col items-center">
-                <span className="text-cyber-green font-bold text-3xl">Security+</span>
-                <span className="text-gray-400 text-sm">CompTIA Certified</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="text-cyber-purple font-bold text-3xl">IAM</span>
-                <span className="text-gray-400 text-sm">Career Focus</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <span className="text-cyber-green font-bold text-3xl">Multiple</span>
-                <span className="text-gray-400 text-sm">Certifications</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

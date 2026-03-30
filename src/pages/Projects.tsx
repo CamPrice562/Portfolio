@@ -17,26 +17,29 @@ const Projects = () => {
         {
           id: '1',
           title: 'Vulnerability Management',
-          description: 'I identify and assess system vulnerabilities using enterprise tools like Tenable and Azure.',
+          description: 'Enterprise vulnerability management program implementation using Tenable and Azure infrastructure with comprehensive policy development.',
           image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop',
-          tags: ['Cybersecurity', 'Tenable', 'Azure'],
-          details: 'I turn raw scan data into clear security steps that reduce the overall attack surface. Using enterprise vulnerability scanning tools like Tenable and Azure, I analyze environments and provide actionable insights to strengthen security postures. This systematic approach helps organizations prioritize and remediate vulnerabilities effectively.'
+          tags: ['Enterprise Security', 'Tenable', 'Azure', 'Policy'],
+          details: 'Developed and implemented a complete vulnerability management program including policy creation, stakeholder buy-in meetings, remediation workflows, and CAB processes. Used Tenable for scanning and Azure VMs for infrastructure, with PowerShell scripts for automated remediation.',
+          link: 'https://github.com/CamPrice562/vulnerability-management/tree/main'
         },
         {
           id: '2',
           title: 'STIGs and System Hardening',
-          description: 'I apply Security Technical Implementation Guides (STIGs) to IT infrastructure.',
+          description: 'PowerShell remediation scripts for DISA Windows 11 STIG v2r6 compliance with automated security hardening.',
           image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop',
-          tags: ['Compliance', 'STIGs', 'Security'],
-          details: 'I ensure systems meet strict compliance standards by applying Security Technical Implementation Guides (STIGs) and locking down configurations to prevent unauthorized access. This systematic approach to security hardening protects critical infrastructure and ensures adherence to government and industry security requirements.'
+          tags: ['Compliance', 'STIGs', 'PowerShell', 'Security'],
+          details: 'Created comprehensive PowerShell scripts to remediate DISA Windows 11 STIG violations. Implemented 10+ security controls including account lockout policies, UAC configuration, telemetry restrictions, and network security settings. Each script targets specific STIG controls with detailed explanations and verification methods.',
+          link: 'https://github.com/CamPrice562/STIGS'
         },
         {
           id: '3',
           title: 'Threat Hunting',
-          description: 'I proactively search for hidden threats on live servers and platforms.',
+          description: 'Proactive threat detection and hunting exercises using enterprise security tools and methodologies.',
           image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop',
           tags: ['Threat Detection', 'Cyber Range', 'Defense'],
-          details: 'I use command-line tools and log analysis to find potential compromises early, rather than waiting for automated alerts. This proactive approach to threat hunting on live servers and platforms like The Cyber Range helps identify and neutralize threats before they cause significant damage.'
+          details: 'Conducted threat hunting exercises using command-line tools and log analysis to identify potential compromises before automated alerts. Focused on proactive defense strategies and early threat detection in enterprise environments.',
+          link: 'https://github.com/CamPrice562/Threat-Hunts'
         },
         {
           id: '4',

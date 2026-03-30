@@ -94,14 +94,6 @@ const Contact = () => {
                     </svg>
                     <p className="mt-2 text-gray-400 group-hover:text-cyber-green transition-colors">LinkedIn</p>
                   </a>
-                  
-                  <a 
-                    href="#"
-                    className="p-4 bg-cyber-darker rounded-md text-center hover:bg-cyber-green/10 transition-colors group"
-                  >
-                    <ExternalLink className="h-8 w-8 mx-auto text-gray-400 group-hover:text-cyber-green transition-colors" />
-                    <p className="mt-2 text-gray-400 group-hover:text-cyber-green transition-colors">Website</p>
-                  </a>
                 </div>
               </div>
             </div>

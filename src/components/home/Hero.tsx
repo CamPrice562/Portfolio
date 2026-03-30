@@ -45,7 +45,7 @@ const Hero = () => {
       ></div>
       
       <div 
-        className="cyber-container relative z-10 pt-20"
+        className="cyber-container relative z-10 pt-20 px-4 sm:px-6 lg:px-8"
         style={{
           transform: `translateY(${scrollY * 0.1}px)`,
           transition: 'transform 0.3s ease-out'
@@ -61,7 +61,7 @@ const Hero = () => {
             }}
           >
             <h1 
-              className="font-tech font-bold text-4xl sm:text-5xl md:text-6xl leading-tight"
+              className="font-tech font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
               style={{
                 transform: `translateY(${scrollY * 0.15}px)`,
                 transition: 'transform 0.3s ease-out'
@@ -71,7 +71,7 @@ const Hero = () => {
             </h1>
             
             <p 
-              className="mt-6 text-lg text-gray-300"
+              className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg text-gray-300 max-w-lg mx-auto lg:mx-0"
               style={{
                 transform: `translateY(${scrollY * 0.18}px)`,
                 transition: 'transform 0.3s ease-out'
@@ -81,17 +81,17 @@ const Hero = () => {
             </p>
             
             <div 
-              className="mt-8 flex flex-wrap gap-4 justify-center lg:justify-start"
+              className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start"
               style={{
                 transform: `translateY(${scrollY * 0.2}px)`,
                 transition: 'transform 0.3s ease-out'
               }}
             >
-              <Link to="/projects" className="btn-cyber group">
+              <Link to="/projects" className="btn-cyber group text-sm sm:text-base px-4 sm:px-6 py-2">
                 <span>View Projects</span>
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link to="/contact" className="btn-cyber bg-cyber-green/10">
+              <Link to="/contact" className="btn-cyber bg-cyber-green/10 text-sm sm:text-base px-4 sm:px-6 py-2">
                 <span>Get in Touch</span>
               </Link>
             </div>
@@ -108,7 +108,7 @@ const Hero = () => {
           >
             <div 
               ref={imageRef}
-              className="relative w-80 h-80"
+              className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-80 lg:h-80"
               style={{
                 transform: `translateY(${scrollY * 0.15}px)`,
                 transition: 'transform 0.3s ease-out'

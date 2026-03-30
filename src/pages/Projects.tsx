@@ -21,8 +21,7 @@ const Projects = () => {
           image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop',
           tags: ['Enterprise Security', 'Tenable', 'Azure', 'Policy'],
           details: 'Developed and implemented a complete vulnerability management program including policy creation, stakeholder buy-in meetings, remediation workflows, and CAB processes. Used Tenable for scanning and Azure VMs for infrastructure, with PowerShell scripts for automated remediation.',
-          link: 'https://github.com/CamPrice562/vulnerability-management/tree/main',
-          showGithubLink: true
+          link: 'https://github.com/CamPrice562/vulnerability-management/tree/main'
         },
         {
           id: '2',
@@ -31,8 +30,7 @@ const Projects = () => {
           image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop',
           tags: ['Compliance', 'STIGs', 'PowerShell', 'Security'],
           details: 'Created comprehensive PowerShell scripts to remediate DISA Windows 11 STIG violations. Implemented 10+ security controls including account lockout policies, UAC configuration, telemetry restrictions, and network security settings. Each script targets specific STIG controls with detailed explanations and verification methods.',
-          link: 'https://github.com/CamPrice562/STIGS',
-          showGithubLink: true
+          link: 'https://github.com/CamPrice562/STIGS'
         },
         {
           id: '3',
@@ -41,8 +39,7 @@ const Projects = () => {
           image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop',
           tags: ['Threat Detection', 'Cyber Range', 'Defense'],
           details: 'Conducted threat hunting exercises using command-line tools and log analysis to identify potential compromises before automated alerts. Focused on proactive defense strategies and early threat detection in enterprise environments.',
-          link: 'https://github.com/CamPrice562/Threat-Hunts',
-          showGithubLink: true
+          link: 'https://github.com/CamPrice562/Threat-Hunts'
         },
         {
           id: '4',

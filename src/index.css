@@ -47,10 +47,24 @@
   
   body {
     @apply bg-cyber-dark text-foreground antialiased overflow-x-hidden font-mono;
+    min-height: 100vh;
   }
   
   html {
     @apply scroll-smooth;
+    font-size: 16px; /* Base font size for mobile */
+  }
+  
+  /* Mobile-specific fixes */
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+    
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
   }
 }
 

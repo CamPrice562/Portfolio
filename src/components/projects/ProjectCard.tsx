@@ -10,7 +10,6 @@ export interface Project {
   tags: string[];
   link?: string;
   details?: string;
-  showGithubLink?: boolean;
 }
 
 interface ProjectCardProps {
@@ -50,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <h3 className="text-xl font-tech font-bold text-white mb-2">{project.title}</h3>
         <p className="text-gray-400 text-sm mb-4">{project.description}</p>
         
-        {project.link && project.showGithubLink && (
+        {project.link && (
           <a 
             href={project.link} 
             target="_blank" 

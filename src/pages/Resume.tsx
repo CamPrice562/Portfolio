@@ -79,7 +79,6 @@ const Resume = () => {
       "Cryptography"
     ],
     certifications: [
-      "CompTIA A+ (Expected November 2025)",
       "CompTIA Security+",
       "Certificate of Achievement: Computer Hardware Technician (Long Beach City College)",
       "IT Essentials Certification (Cisco Networking Academy)",

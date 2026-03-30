@@ -12,17 +12,18 @@ const Hero = () => {
   const imageRef = useRef<HTMLDivElement>(null);
   
   const words = [
-    'Cybersecurity Intern',
-    'Security+ Certified',
-    'IAM Engineer',
-    'Automation Builder'
+    'Cybersecurity Analyst',
+    'Threat Hunter',
+    'Security Engineer',
+    'IAM Specialist',
+    'Defense Architect'
   ];
   
   const fullText = 'Cybersecurity Intern and CompTIA Security+ certified professional specializing in Identity and Access Management. I build automation tools to secure systems and practice hands-on defense on platforms like The Cyber Range.';
   
   // Typing animation effect
   useEffect(() => {
-    if (isVisible && currentWordIndex < words.length) {
+    if (isVisible) {
       const currentWord = words[currentWordIndex];
       let charIndex = 0;
       
@@ -33,9 +34,7 @@ const Hero = () => {
         } else {
           clearInterval(typeInterval);
           setTimeout(() => {
-            if (currentWordIndex < words.length - 1) {
-              setCurrentWordIndex(currentWordIndex + 1);
-            }
+            setCurrentWordIndex((prev) => (prev + 1) % words.length);
           }, 2000);
         }
       }, 150);
@@ -121,9 +120,9 @@ const Hero = () => {
               <span className="text-white block">Cameron Price</span>
             </h1>
             
-            <div className="mt-4 sm:mt-6 h-6 sm:h-8">
-              <p className="text-sm sm:text-base lg:text-lg text-cyber-purple font-medium animate-pulse">
-                {typedText || '|'}
+            <div className="mt-4 sm:mt-6">
+              <p className="text-sm sm:text-base lg:text-lg text-cyber-purple font-medium">
+                {typedText}<span className="animate-pulse">|</span>
               </p>
             </div>
             

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Instagram, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
               <a 
-                href="https://github.com/cameronjprice" 
+                href="https://github.com/CamPrice562" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-cyber-purple transition-colors"
@@ -29,22 +29,13 @@ const Footer = () => {
                 <Github size={20} />
               </a>
               <a 
-                href="https://linkedin.com/in/cameron-price-6013831b4" 
+                href="https://www.linkedin.com/in/cameronprice562/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-cyber-purple transition-colors"
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin size={20} />
-              </a>
-              <a 
-                href="#" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyber-purple transition-colors"
-                aria-label="Instagram Profile"
-              >
-                <Instagram size={20} />
               </a>
               <a 
                 href="mailto:cameronjordanprice562@yahoo.com" 

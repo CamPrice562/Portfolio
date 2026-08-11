@@ -29,7 +29,7 @@ const RoadmapGrid = () => {
       <div className="cyber-container relative z-10">
         <div className="max-w-3xl mb-10">
           <h2 className="font-tech text-3xl font-bold text-white">
-            The Build <span className="text-glow">Pipeline</span>
+            Cloud Identity &amp; <span className="text-glow">Security Engineering</span>
           </h2>
           <p className="mt-3 text-gray-400">
             Twelve identity projects across Microsoft Entra and AWS, each scoped like a real work ticket and shipped as

@@ -248,7 +248,7 @@ export const projects: Project[] = [
   },
 ];
 
-export type RoadmapStatus = 'Shipped' | 'In Progress' | 'Planned';
+export type RoadmapStatus = 'Shipped' | 'In Progress' | 'Queued';
 
 export interface RoadmapItem {
   number: number;
@@ -283,70 +283,70 @@ export const roadmap: RoadmapItem[] = [
     title: 'Phishing-Resistant MFA & Conditional Access as Code',
     pitch:
       'Passkeys plus a Conditional Access policy defined in Terraform, so every change is a reviewable pull request instead of a silent portal click.',
-    status: 'Planned',
+    status: 'Queued',
   },
   {
     number: 4,
     title: 'Graph API User Audit',
     pitch:
       'A PowerShell module that finds stale and never-used accounts, backed by Pester tests that mock the Graph call entirely.',
-    status: 'Planned',
+    status: 'Queued',
   },
   {
     number: 5,
     title: 'Terraform for Entra ID',
     pitch:
       'Groups, role assignments, app registrations, and Conditional Access policies for a whole product team in a single apply.',
-    status: 'Planned',
+    status: 'Queued',
   },
   {
     number: 6,
     title: 'AWS IAM Identity Center via Terraform',
     pitch:
       'Permission sets and account assignments across a four-account org, synced from Entra over SCIM, with zero persistent IAM users.',
-    status: 'Planned',
+    status: 'Queued',
   },
   {
     number: 7,
     title: 'SAML & SCIM Federation: Okta to Salesforce',
     pitch:
       'Single sign-on plus automatic provisioning and deprovisioning across the full joiner/mover/leaver cycle, verifiable via a Postman collection.',
-    status: 'Planned',
+    status: 'Queued',
   },
   {
     number: 8,
     title: 'Privileged Access: PIM & Permission Boundaries',
     pitch:
       'Just-in-time admin activation on the Entra side, permission boundaries and break-glass on the AWS side. One principle, two clouds.',
-    status: 'Planned',
+    status: 'Queued',
   },
   {
     number: 9,
     title: 'Non-Human Identity Inventory',
     pitch:
       'Every service principal, managed identity, app registration, and AWS key inventoried across both clouds, with the riskiest flagged.',
-    status: 'Planned',
+    status: 'Queued',
   },
   {
     number: 10,
     title: 'Identity Threat Detection & Response',
     pitch:
       'KQL detections and SOC runbooks for password spray, impossible travel, and token theft, validated by a simulated attack that actually trips them.',
-    status: 'Planned',
+    status: 'Queued',
   },
   {
     number: 11,
     title: 'DevSecOps for IAM: Checkov in CI/CD',
     pitch:
       'One reusable workflow that scans every Terraform pull request for IAM misconfigurations and blocks the unsafe ones from merging.',
-    status: 'Planned',
+    status: 'Queued',
   },
   {
     number: 12,
     title: 'Capstone: Multi-Cloud Identity Landing Zone',
     pitch:
       'One repo that takes an empty state to a fully governed multi-cloud identity foundation in about four minutes.',
-    status: 'Planned',
+    status: 'Queued',
   },
 ];
 
@@ -438,7 +438,7 @@ export const tooling = [
   {
     name: 'SRT & Video Composer',
     description:
-      'An Adobe Premiere CEP extension driving a three-pass AI prompt chain that turns silent screen recordings into subtitled, narrated demo videos. Built to document the IAM roadmap projects without spending hours per video in an editor.',
+      'An Adobe Premiere CEP extension driving a three-pass AI prompt chain that turns silent screen recordings into subtitled, narrated demo videos. Built to document the identity projects without spending hours per video in an editor.',
   },
   {
     name: 'MCP Tooling Stack',

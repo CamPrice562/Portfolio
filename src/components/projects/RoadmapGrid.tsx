@@ -5,21 +5,22 @@ import { roadmap, type RoadmapStatus } from '@/data/portfolio';
 const statusStyles: Record<RoadmapStatus, string> = {
   Shipped: 'bg-cyber-purple/15 text-cyber-purple border-cyber-purple/40',
   'In Progress': 'bg-amber-500/10 text-amber-400 border-amber-500/30',
-  Planned: 'bg-gray-700/30 text-gray-500 border-gray-700',
+  Queued: 'bg-gray-700/30 text-gray-500 border-gray-700',
 };
 
 const cardStyles: Record<RoadmapStatus, string> = {
   Shipped: 'border-cyber-purple/30 hover:border-cyber-purple/60',
   'In Progress': 'border-amber-500/20 hover:border-amber-500/40',
-  Planned: 'border-gray-800 hover:border-gray-700',
+  Queued: 'border-gray-800 hover:border-gray-700',
 };
 
 /**
- * The 12-project multi-cloud IAM roadmap, shown at a glance with honest
- * status badges so shipped work is never confused with planned work.
+ * The 12-project multi-cloud identity build pipeline, shown at a glance with
+ * honest status badges so shipped work is never confused with queued work.
  */
 const RoadmapGrid = () => {
   const shipped = roadmap.filter((item) => item.status === 'Shipped').length;
+  const inProgress = roadmap.filter((item) => item.status === 'In Progress').length;
 
   return (
     <section className="py-16 bg-cyber-darker relative overflow-hidden">
@@ -28,16 +29,27 @@ const RoadmapGrid = () => {
       <div className="cyber-container relative z-10">
         <div className="max-w-3xl mb-10">
           <h2 className="font-tech text-3xl font-bold text-white">
-            The <span className="text-glow">IAM Roadmap</span>
+            The Build <span className="text-glow">Pipeline</span>
           </h2>
           <p className="mt-3 text-gray-400">
-            Twelve projects building a multi-cloud identity portfolio across Microsoft Entra and AWS, each scoped like a
-            real work ticket and shipped as a repo with a README, architecture diagram, tests, and CI. Project 12 ties
-            all of them into a single landing zone that applies from an empty state.
+            Twelve identity projects across Microsoft Entra and AWS, each scoped like a real work ticket and shipped as
+            a repo with a README, architecture diagram, tests, and CI. Number 12 ties every prior stage into a single
+            landing zone that applies from an empty state.
           </p>
-          <p className="mt-3 text-sm text-gray-500">
-            {shipped} shipped · 1 in progress · {roadmap.length - shipped - 1} planned
-          </p>
+          <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs">
+            <span className="flex items-center gap-2 text-cyber-purple">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyber-purple"></span>
+              {shipped} shipped
+            </span>
+            <span className="flex items-center gap-2 text-amber-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+              {inProgress} in progress
+            </span>
+            <span className="flex items-center gap-2 text-gray-500">
+              <span className="w-1.5 h-1.5 rounded-full bg-gray-600"></span>
+              {roadmap.length - shipped - inProgress} queued
+            </span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -57,7 +69,7 @@ const RoadmapGrid = () => {
 
                 <h3
                   className={`font-tech text-sm font-semibold mb-2 ${
-                    item.status === 'Planned' ? 'text-gray-400' : 'text-white'
+                    item.status === 'Queued' ? 'text-gray-400' : 'text-white'
                   }`}
                 >
                   {item.title}

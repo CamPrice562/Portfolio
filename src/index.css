@@ -165,6 +165,57 @@
   }
 
   /*
+   * Portrait treatment.
+   *
+   * Replaces the old morphing blob and its hard-edged 4px halo. The glow is a
+   * multi-stop radial fading to zero-alpha teal (never `transparent`), scaled
+   * past the portrait so it dissipates into the page instead of terminating on
+   * a visible circle edge. The hairline ring gives the shape a crisp boundary
+   * without the halo doing that job.
+   */
+  .portrait-glow {
+    position: absolute;
+    inset: -22%;
+    pointer-events: none;
+    border-radius: 9999px;
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgba(20, 184, 166, 0.16) 0%,
+      rgba(20, 184, 166, 0.128) 22%,
+      rgba(20, 184, 166, 0.086) 40%,
+      rgba(20, 184, 166, 0.05) 56%,
+      rgba(20, 184, 166, 0.024) 70%,
+      rgba(20, 184, 166, 0.008) 84%,
+      rgba(20, 184, 166, 0) 100%
+    );
+  }
+
+  @supports (background-image: radial-gradient(in oklab, red, blue)) {
+    .portrait-glow {
+      background-image: radial-gradient(
+        circle at 50% 50% in oklab,
+        rgba(20, 184, 166, 0.16) 0%,
+        rgba(20, 184, 166, 0.128) 22%,
+        rgba(20, 184, 166, 0.086) 40%,
+        rgba(20, 184, 166, 0.05) 56%,
+        rgba(20, 184, 166, 0.024) 70%,
+        rgba(20, 184, 166, 0.008) 84%,
+        rgba(20, 184, 166, 0) 100%
+      );
+    }
+  }
+
+  /* A single faint concentric ring. Reads as an instrument bezel, which suits
+     the theme, and stays quiet enough not to compete with the portrait. */
+  .portrait-ring {
+    position: absolute;
+    inset: -9%;
+    pointer-events: none;
+    border-radius: 9999px;
+    border: 1px solid rgba(20, 184, 166, 0.12);
+  }
+
+  /*
    * Page-header fade into the page body. Fades the body colour up from its own
    * zero-alpha rather than from `transparent`, and eases the ramp, because the
    * delta here (#090912 to #0d0d12) is only four 8-bit levels and a linear

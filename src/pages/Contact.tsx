@@ -15,7 +15,8 @@ const Contact = () => {
             Get in <span className="text-glow">Touch</span>
           </h1>
           <p className="text-gray-300 max-w-2xl">
-            Have a security concern or interested in working together? Fill out the form below or reach out directly through one of my contact channels.
+            I am open to IT support, cloud engineering, identity, and cloud security roles, in Long Beach or remote.
+            Send a message below or reach me directly.
           </p>
         </div>
       </div>
@@ -107,10 +108,11 @@ const Contact = () => {
         
         <div className="cyber-container relative z-10 text-center">
           <h2 className="font-tech text-3xl font-bold text-white mb-6">
-            Let's Work <span className="text-glow">Together</span>
+            Let's <span className="text-glow">Talk</span>
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            I'm always interested in new cybersecurity challenges and opportunities to help organizations strengthen their security posture.
+            The fastest way to see how I work is the code. My repos are public, my threat hunt write-ups explain my
+            reasoning step by step, and I am happy to walk through any of it on a call.
           </p>
         </div>
       </section>

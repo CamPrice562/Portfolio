@@ -1,6 +1,5 @@
 
 import React, { useEffect, useRef } from 'react';
-import { Shield, Server, Code, AlertTriangle, CheckCircle } from 'lucide-react';
 
 const About = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -30,30 +29,32 @@ const About = () => {
     };
   }, []);
   
-  const skills = [
-    { name: "Identity & Access Management", level: 85 },
-    { name: "Vulnerability Management", level: 80 },
-    { name: "Security Automation", level: 85 },
-    { name: "System Hardening (STIGs)", level: 80 },
-    { name: "Threat Hunting", level: 75 },
-  ];
-  
   return (
     <section ref={sectionRef} id="about" className="py-20 bg-cyber-darker relative overflow-hidden">
       <div className="absolute inset-0 cyber-grid opacity-10"></div>
       
       <div className="cyber-container relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-tech text-3xl font-bold text-white mb-6 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-tech text-3xl font-bold text-white mb-6 text-center animate-on-scroll opacity-0 translate-y-10 transition-all duration-700">
             About <span className="text-glow">Me</span>
           </h2>
-          
-          <div className="space-y-4 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
+
+          <div className="space-y-5 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
             <p className="text-gray-300 text-lg">
-              I am a Cybersecurity Intern pursuing a Bachelor of Science in Computer Science at Southern New Hampshire University, with a CompTIA Security+ certification and a clear goal of becoming an Identity and Access Management (IAM) Engineer. I actively apply security concepts in real-world business environments and build automation tools to secure systems.
+              I work as an IT Support &amp; Security Analyst at Log(N) Pacific, where the job runs the full width of an IT
+              team. On any given week I am hardening Windows endpoints, running authenticated vulnerability scans across
+              server assets, writing detection rules, and working live alerts out of the SOC queue. That range is
+              deliberate. I wanted to learn how the pieces actually connect before specializing.
             </p>
             <p className="text-gray-300 text-lg">
-              My expertise includes vulnerability management using enterprise tools like Tenable and Azure, applying Security Technical Implementation Guides (STIGs) for system hardening, and proactive threat hunting on live servers. I turn raw security data into actionable insights and ensure systems meet strict compliance standards while practicing hands-on defense on platforms like The Cyber Range.
+              The direction I am heading is cloud identity. I hold CompTIA Security+ and the Azure Administrator
+              Associate certification, I am studying for SC-300, and I am building out a twelve-project multi-cloud IAM
+              portfolio across Microsoft Entra and AWS. Each project ships as a real repo with tests and CI rather than a
+              set of portal screenshots, because I would rather show work that runs than work that was clicked.
+            </p>
+            <p className="text-gray-300 text-lg">
+              I finish my B.S. in Computer Science at Southern New Hampshire University in early 2027, and I am based in
+              Long Beach, California.
             </p>
           </div>
         </div>

@@ -1,327 +1,212 @@
-
 import React from 'react';
-import PDFViewer from '@/components/resume/PDFViewer';
-import { Download, FileText, Award, Briefcase, GraduationCap, Code, Shield, ExternalLink } from 'lucide-react';
+import { Award, Briefcase, GraduationCap, Trophy, Shield, CircleDashed } from 'lucide-react';
+import {
+  activities,
+  certifications,
+  education,
+  experience,
+  priorExperience,
+  skillGroups,
+} from '@/data/portfolio';
 
 const Resume = () => {
-  // We'd use a real PDF URL in production
-  const resumePdfUrl = '/Cameron_Price_Resume.pdf';
-  
-  // Resume data based on Cameron's experience
-  const resumeData = {
-    experience: [
-      {
-        title: "Cybersecurity Intern",
-        company: "The Cyber Range",
-        period: "2025 - Present",
-        description: "Gaining hands-on cybersecurity experience with enterprise security tools and real-world threat scenarios.",
-        achievements: [
-          "Work with enterprise security tools including Tenable for vulnerability management",
-          "Utilize Microsoft Defender for Endpoint (MDE) for threat detection and response",
-          "Gain practical experience with Azure cloud security services and configurations",
-          "Practice threat hunting and incident response in controlled environment",
-          "Apply security policies and procedures in enterprise-like settings"
-        ]
-      },
-      {
-        title: "Digital Marketing Intern",
-        company: "Leap - Remote Position",
-        period: "June 2025 - September 2025",
-        description: "Analyzed social media data and web analytics to inform strategic marketing decisions.",
-        achievements: [
-          "Analyzed social media data and web analytics to identify content trends and inform strategic marketing decisions",
-          "Maintained and updated comprehensive database of potential influencer partners using Excel and CRM tools",
-          "Prepared detailed reports on key performance indicators (KPIs) to measure campaign effectiveness and ROI",
-          "Collaborated with cross-functional teams to implement data-driven marketing strategies"
-        ]
-      }
-    ],
-    education: [
-      {
-        degree: "Bachelor of Science in Computer Science",
-        institution: "Southern New Hampshire University",
-        year: "Expected December 2026",
-        details: "Manchester, NH",
-        courses: [
-          "Cybersecurity Fundamentals",
-          "Network Security",
-          "Database Management",
-          "Software Engineering"
-        ]
-      },
-      {
-        degree: "Associate of Science in Computer Science",
-        institution: "Long Beach City College",
-        year: "Completed",
-        details: "Long Beach, CA"
-      }
-    ],
-    skills: [
-      "Python",
-      "Java",
-      "JavaScript",
-      "HTML/CSS",
-      "SQL",
-      "PowerShell",
-      "Windows 10/11",
-      "macOS",
-      "Linux (Ubuntu, Kali Linux)",
-      "Active Directory",
-      "Wireshark",
-      "Nmap",
-      "Metasploit",
-      "VirtualBox",
-      "VMware",
-      "Risk Assessment",
-      "Network Security",
-      "System Hardening",
-      "OSINT",
-      "Cryptography"
-    ],
-    certifications: [
-      "CompTIA Security+",
-      "Certificate of Achievement: Computer Hardware Technician (Long Beach City College)",
-      "IT Essentials Certification (Cisco Networking Academy)",
-      "Microsoft Technology Associate (MTA): JavaScript Fundamentals"
-    ],
-    projects: [
-      {
-        name: "Vulnerability Management",
-        role: "Security Analyst",
-        year: "2025",
-        description: "Enterprise vulnerability management program implementation using Tenable and Azure infrastructure with comprehensive policy development and stakeholder management.",
-        link: "https://github.com/CamPrice562/vulnerability-management/tree/main",
-        details: "Developed and implemented a complete vulnerability management program including policy creation, stakeholder buy-in meetings, remediation workflows, and CAB processes. Used Tenable for scanning and Azure VMs for infrastructure, with PowerShell scripts for automated remediation."
-      },
-      {
-        name: "STIGs and System Hardening",
-        role: "Security Engineer",
-        year: "2025",
-        description: "PowerShell remediation scripts for DISA Windows 11 STIG v2r6 compliance with automated security hardening.",
-        link: "https://github.com/CamPrice562/STIGS",
-        details: "Created comprehensive PowerShell scripts to remediate DISA Windows 11 STIG violations. Implemented 10+ security controls including account lockout policies, UAC configuration, telemetry restrictions, and network security settings. Each script targets specific STIG controls with detailed explanations and verification methods."
-      },
-      {
-        name: "Threat Hunting",
-        role: "Threat Hunter",
-        year: "2025",
-        description: "Proactive threat detection and hunting exercises using enterprise security tools and methodologies.",
-        link: "https://github.com/CamPrice562/Threat-Hunts",
-        details: "Conducted threat hunting exercises using command-line tools and log analysis to identify potential compromises before automated alerts. Focused on proactive defense strategies and early threat detection in enterprise environments."
-      }
-    ],
-    activities: [
-      {
-        name: "National Cyber League (NCL) Competitions",
-        role: "Competitor",
-        year: "Ongoing",
-        description: "Competitive cybersecurity challenges demonstrating practical skills in time-constrained environments.",
-        achievements: [
-          "Completed advanced challenges in OSINT, Cryptography, and Network Traffic Analysis",
-          "Maintained top 25% ranking in regional competitions",
-          "Utilized industry-standard tools including Wireshark for packet analysis",
-          "Demonstrated practical cybersecurity skills under pressure"
-        ]
-      },
-      {
-        name: "The Cyber Range Training",
-        role: "Security Intern",
-        year: "2025 - Present",
-        description: "Hands-on cybersecurity training with enterprise security tools and real-world scenarios.",
-        achievements: [
-          "Practice threat hunting and incident response in controlled environments",
-          "Work with enterprise security tools including Tenable and MDE",
-          "Apply security policies and procedures in enterprise-like settings",
-          "Develop practical skills in vulnerability management and cloud security"
-        ]
-      }
-    ]
-  };
-  
   return (
     <div className="min-h-screen bg-cyber-dark">
       <div className="pt-24 pb-12 bg-cyber-darker relative overflow-hidden">
         <div className="absolute inset-0 cyber-grid opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-cyber-dark"></div>
-        
+
         <div className="cyber-container relative z-10">
           <div className="text-center">
             <h1 className="font-tech text-4xl md:text-5xl font-bold text-white mb-2">
               <span className="text-glow">Experience</span>
             </h1>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              A detailed overview of my professional experience, skills, and qualifications in the cybersecurity domain.
+              Where I work, what I have shipped, and what I am certified in.
             </p>
           </div>
         </div>
       </div>
-      
-      {/* Resume Details */}
+
       <section className="py-12 bg-cyber-dark">
         <div className="cyber-container">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Experience Column */}
+            {/* Main column */}
             <div className="lg:col-span-2">
               <div className="flex items-center mb-6">
-                <Briefcase size={24} className="text-cyber-purple mr-3" />
+                <Briefcase size={22} className="text-cyber-purple mr-3" />
                 <h2 className="font-tech text-2xl font-bold text-white">Professional Experience</h2>
               </div>
-              
+
               <div className="space-y-8">
-                {resumeData.experience.map((job, index) => (
-                  <div key={index} className={`card-cyber p-6 ${index % 2 === 0 ? 'bg-cyber-darker' : 'bg-cyber-dark'}`}>
-                    <div className="flex justify-between items-start mb-2">
+                {experience.map((job) => (
+                  <div key={job.company} className="card-cyber p-6">
+                    <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
                       <h3 className="font-tech text-xl font-semibold text-white">{job.title}</h3>
                       <span className="bg-cyber-purple/10 text-cyber-purple text-xs px-2 py-1 rounded-md whitespace-nowrap">
                         {job.period}
                       </span>
                     </div>
-                    <div className="text-cyber-purple font-medium mb-4">{job.company}</div>
+                    <div className="text-cyber-purple font-medium mb-1">{job.company}</div>
+                    <div className="text-gray-500 text-sm mb-4">{job.location}</div>
                     <p className="text-gray-300 mb-4">{job.description}</p>
-                    <h4 className="text-white font-medium mb-3">Key Achievements:</h4>
-                    <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                    <ul className="space-y-2.5">
                       {job.achievements.map((achievement, i) => (
-                        <li key={i} className="pl-2">{achievement}</li>
+                        <li key={i} className="flex text-gray-300 text-sm leading-relaxed">
+                          <span className="text-cyber-purple mr-3 mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-cyber-purple"></span>
+                          <span>{achievement}</span>
+                        </li>
                       ))}
                     </ul>
                   </div>
                 ))}
               </div>
-              
-              <div className="flex items-center mb-6 mt-12">
-                <Code size={24} className="text-cyber-purple mr-3" />
-                <h2 className="font-tech text-2xl font-bold text-white">Projects</h2>
-              </div>
-              
-              <div className="space-y-6">
-                {resumeData.projects.map((project, index) => (
-                  <div key={index} className={`card-cyber p-6 ${index % 2 === 0 ? 'bg-cyber-darker' : 'bg-cyber-dark'}`}>
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="font-tech text-xl font-semibold text-white">{project.name}</h3>
-                      <span className="bg-cyber-purple/10 text-cyber-purple text-xs px-2 py-1 rounded-md">
-                        {project.year}
-                      </span>
-                    </div>
-                    <div className="text-cyber-purple font-medium mb-2">{project.role}</div>
-                    <p className="text-gray-300 mb-4">{project.description}</p>
-                    {project.details && (
-                      <p className="text-gray-400 text-sm mb-4">{project.details}</p>
-                    )}
-                    {project.link && (
-                      <a 
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer" 
-                        className="inline-flex items-center text-cyber-green hover:text-cyber-purple transition-colors text-sm"
+
+              {priorExperience.length > 0 && (
+                <div className="mt-6">
+                  <h3 className="text-gray-500 text-xs uppercase tracking-[0.2em] mb-3">Prior Experience</h3>
+                  <div className="space-y-3">
+                    {priorExperience.map((job) => (
+                      <div
+                        key={job.company}
+                        className="border-l-2 border-gray-800 pl-4 py-1"
                       >
-                        <ExternalLink size={16} className="mr-1" />
-                        View on GitHub
-                      </a>
-                    )}
+                        <div className="flex flex-wrap items-baseline gap-x-3">
+                          <span className="text-gray-300 text-sm font-medium">{job.title}</span>
+                          <span className="text-gray-500 text-sm">{job.company}</span>
+                          <span className="text-gray-600 text-xs">{job.period}</span>
+                        </div>
+                        <p className="text-gray-500 text-sm mt-1">{job.description}</p>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-              
+                </div>
+              )}
+
               <div className="flex items-center mb-6 mt-12">
-                <Award size={24} className="text-cyber-purple mr-3" />
-                <h2 className="font-tech text-2xl font-bold text-white">Activities</h2>
+                <Trophy size={22} className="text-cyber-purple mr-3" />
+                <h2 className="font-tech text-2xl font-bold text-white">Competitions & Activities</h2>
               </div>
-              
+
               <div className="space-y-6">
-                {resumeData.activities.map((activity, index) => (
-                  <div key={index} className={`card-cyber p-6 ${index % 2 === 0 ? 'bg-cyber-darker' : 'bg-cyber-dark'}`}>
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="font-tech text-xl font-semibold text-white">{activity.name}</h3>
-                      <span className="bg-cyber-purple/10 text-cyber-purple text-xs px-2 py-1 rounded-md">
+                {activities.map((activity) => (
+                  <div key={activity.name} className="card-cyber p-6">
+                    <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
+                      <h3 className="font-tech text-lg font-semibold text-white">{activity.name}</h3>
+                      <span className="bg-cyber-purple/10 text-cyber-purple text-xs px-2 py-1 rounded-md whitespace-nowrap">
                         {activity.year}
                       </span>
                     </div>
-                    <div className="text-cyber-purple font-medium mb-2">{activity.role}</div>
-                    <p className="text-gray-300 mb-4">{activity.description}</p>
+                    <div className="text-cyber-purple text-sm font-medium mb-2">{activity.role}</div>
+                    <p className="text-gray-300 text-sm mb-4">{activity.description}</p>
                     {activity.achievements && (
-                      <div>
-                        <h4 className="text-white font-medium mb-3">Key Achievements:</h4>
-                        <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                          {activity.achievements.map((achievement, i) => (
-                            <li key={i} className="pl-2">{achievement}</li>
-                          ))}
-                        </ul>
-                      </div>
+                      <ul className="space-y-2">
+                        {activity.achievements.map((achievement, i) => (
+                          <li key={i} className="flex text-gray-400 text-sm leading-relaxed">
+                            <span className="text-cyber-purple mr-3 mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-cyber-purple"></span>
+                            <span>{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
                     )}
                   </div>
                 ))}
               </div>
-              
+
               <div className="flex items-center mb-6 mt-12">
-                <GraduationCap size={24} className="text-cyber-purple mr-3" />
+                <GraduationCap size={22} className="text-cyber-purple mr-3" />
                 <h2 className="font-tech text-2xl font-bold text-white">Education</h2>
               </div>
-              
+
               <div className="space-y-6">
-                {resumeData.education.map((edu, index) => (
-                  <div key={index} className={`card-cyber p-6 ${index % 2 === 0 ? 'bg-cyber-darker' : 'bg-cyber-dark'}`}>
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="font-tech text-xl font-semibold text-white">{edu.degree}</h3>
-                      <span className="bg-cyber-purple/10 text-cyber-purple text-xs px-2 py-1 rounded-md">
+                {education.map((edu) => (
+                  <div key={edu.degree} className="card-cyber p-6">
+                    <div className="flex flex-wrap justify-between items-start gap-2 mb-2">
+                      <h3 className="font-tech text-lg font-semibold text-white">{edu.degree}</h3>
+                      <span className="bg-cyber-purple/10 text-cyber-purple text-xs px-2 py-1 rounded-md whitespace-nowrap">
                         {edu.year}
                       </span>
                     </div>
                     <div className="text-cyber-purple font-medium mb-2">{edu.institution}</div>
-                    <p className="text-gray-300 mb-2">{edu.details}</p>
+                    <p className="text-gray-400 text-sm mb-3">{edu.details}</p>
                     {edu.courses && (
-                      <div>
-                        <h4 className="text-white font-medium mb-2">Relevant Courses:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {edu.courses.map((course, i) => (
-                            <span 
-                              key={i}
-                              className="px-2 py-1 bg-cyber-purple/10 text-cyber-purple text-xs rounded-md"
-                            >
-                              {course}
-                            </span>
-                          ))}
-                        </div>
+                      <div className="flex flex-wrap gap-2">
+                        {edu.courses.map((course) => (
+                          <span
+                            key={course}
+                            className="px-2 py-1 bg-cyber-purple/10 text-cyber-purple text-xs rounded-md"
+                          >
+                            {course}
+                          </span>
+                        ))}
                       </div>
                     )}
                   </div>
                 ))}
               </div>
             </div>
-            
-            {/* Skills Column */}
-            <div>
-              <div className="flex items-center mb-6">
-                <Award size={24} className="text-cyber-purple mr-3" />
-                <h2 className="font-tech text-2xl font-bold text-white">Skills & Expertise</h2>
-              </div>
-              
-              <div className="card-cyber p-6">
-                <div className="flex flex-wrap gap-2">
-                  {resumeData.skills.map((skill, index) => (
-                    <span 
-                      key={index}
-                      className="px-3 py-2 bg-cyber-purple/10 text-cyber-purple text-sm rounded-md"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+
+            {/* Sidebar */}
+            <div className="space-y-8">
+              <div>
+                <div className="flex items-center mb-6">
+                  <Shield size={22} className="text-cyber-purple mr-3" />
+                  <h2 className="font-tech text-xl font-bold text-white">Certifications</h2>
+                </div>
+
+                <div className="card-cyber p-6">
+                  <ul className="space-y-4">
+                    {certifications.held.map((cert) => (
+                      <li key={cert.name} className="border-l-2 border-cyber-purple/40 pl-4">
+                        <div className="text-white text-sm font-medium">{cert.name}</div>
+                        <div className="text-gray-500 text-xs mt-0.5">
+                          {cert.issuer}
+                          {cert.note && ` · ${cert.note}`}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex items-center mt-6 mb-4 pt-5 border-t border-cyber-purple/10">
+                    <CircleDashed size={16} className="text-gray-500 mr-2" />
+                    <span className="text-gray-400 text-xs uppercase tracking-wide">In Progress</span>
+                  </div>
+                  <ul className="space-y-3">
+                    {certifications.inProgress.map((cert) => (
+                      <li key={cert.name} className="border-l-2 border-gray-700 pl-4">
+                        <div className="text-gray-300 text-sm">{cert.name}</div>
+                        <div className="text-gray-500 text-xs mt-0.5">{cert.note}</div>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-              
-              <div className="flex items-center mb-6 mt-12">
-                <Shield size={24} className="text-cyber-purple mr-3" />
-                <h2 className="font-tech text-2xl font-bold text-white">Certifications</h2>
-              </div>
-              
-              <div className="card-cyber p-6">
-                <ul className="space-y-4">
-                  {resumeData.certifications.map((cert, index) => (
-                    <li key={index} className="flex items-center">
-                      <span className="w-2 h-2 bg-cyber-purple rounded-full mr-3"></span>
-                      <span className="text-gray-300">{cert}</span>
-                    </li>
+
+              <div>
+                <div className="flex items-center mb-6">
+                  <Award size={22} className="text-cyber-purple mr-3" />
+                  <h2 className="font-tech text-xl font-bold text-white">Skills</h2>
+                </div>
+
+                <div className="space-y-4">
+                  {skillGroups.map((group) => (
+                    <div key={group.name} className="card-cyber p-5">
+                      <h3 className="font-tech text-xs font-semibold text-cyber-purple uppercase tracking-wide mb-3">
+                        {group.name}
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        {group.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-2 py-1 bg-cyber-purple/10 text-gray-300 text-xs rounded-md"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             </div>
           </div>

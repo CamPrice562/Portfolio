@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="text-cyber-purple">Cameron</span> Price
             </Link>
             <p className="text-gray-400 mt-2 text-sm max-w-md">
-              Securing the digital frontier with advanced cybersecurity solutions and proactive threat mitigation.
+              IT support, cloud engineering, and identity security. Long Beach, California.
             </p>
           </div>
           

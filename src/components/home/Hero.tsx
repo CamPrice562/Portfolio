@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Terminal, Shield, Code, Zap } from 'lucide-react';
+import { profile } from '@/data/portfolio';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,17 +11,11 @@ const Hero = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
-  
-  const words = [
-    'Cybersecurity Analyst',
-    'Threat Hunter',
-    'Security Engineer',
-    'IAM Specialist',
-    'Defense Architect'
-  ];
-  
-  const fullText = 'Cybersecurity Intern and CompTIA Security+ certified professional specializing in Identity and Access Management. I build automation tools to secure systems and practice hands-on defense on platforms like The Cyber Range.';
-  
+
+  const words = profile.titles;
+
+  const credentials = ['CompTIA Security+', 'AZ-104', 'B.S. Computer Science'];
+
   // Typing animation effect
   useEffect(() => {
     if (isVisible) {
@@ -126,17 +121,32 @@ const Hero = () => {
               </p>
             </div>
             
-            <p 
+            <p
               className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg text-gray-300 max-w-lg mx-auto lg:mx-0"
               style={{
                 transform: `translateY(${scrollY * 0.08}px)`,
                 transition: 'transform 0.5s ease-out'
               }}
             >
-              I build automation tools to secure systems and practice hands-on defense on platforms like The Cyber Range.
+              {profile.tagline}
             </p>
-            
-            <div 
+
+            <p className="mt-3 text-sm sm:text-base text-gray-400 max-w-lg mx-auto lg:mx-0">
+              {profile.summary}
+            </p>
+
+            <div className="mt-5 flex flex-wrap gap-2 justify-center lg:justify-start">
+              {credentials.map((credential) => (
+                <span
+                  key={credential}
+                  className="px-3 py-1 text-xs rounded-md border border-cyber-purple/30 bg-cyber-purple/10 text-cyber-purple"
+                >
+                  {credential}
+                </span>
+              ))}
+            </div>
+
+            <div
               className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start"
               style={{
                 transform: `translateY(${scrollY * 0.06}px)`,

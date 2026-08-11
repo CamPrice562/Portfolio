@@ -122,10 +122,10 @@ export default {
 				mono: ['Fira Code', 'Consolas', 'Monaco', 'monospace'],
 				tech: ['Orbitron', 'Rajdhani', 'sans-serif'],
 			},
+			// Ambient gradients live in index.css (.ambient-glow, .section-wash) so
+			// they can carry multi-stop falloffs and an oklab @supports upgrade.
 			backgroundImage: {
-				'cyber-grid': 'radial-gradient(#14b8a6 1px, transparent 1px)',
-				'matrix': 'linear-gradient(180deg, rgba(0,59,0,0.15) 0%, rgba(0,59,0,0.3) 100%)',
-				'hero-glow': 'radial-gradient(circle at 50% 50%, rgba(20, 184, 166, 0.1), transparent 60%)',
+				'cyber-grid': 'radial-gradient(rgba(20,184,166,1) 1px, rgba(20,184,166,0) 1px)',
 			}
 		}
 	},

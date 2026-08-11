@@ -52,7 +52,7 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-cyber-darker relative overflow-hidden">
-        <div className="absolute inset-0 bg-matrix opacity-20"></div>
+        <div className="absolute inset-0 section-wash dither"></div>
 
         <div className="cyber-container relative z-10 text-center">
           <h2 className="font-tech text-3xl font-bold text-white mb-6 mx-auto max-w-3xl">

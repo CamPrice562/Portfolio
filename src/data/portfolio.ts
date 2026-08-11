@@ -17,7 +17,7 @@ export type Track = (typeof TRACKS)[number];
 
 export const profile = {
   name: 'Cameron Price',
-  location: 'Long Beach, CA 90807',
+  location: 'Long Beach, CA',
   email: 'cameronjordanprice562@yahoo.com',
   phone: '562-253-3505',
   github: 'https://github.com/CamPrice562',
@@ -29,11 +29,30 @@ export const profile = {
     'IAM Analyst',
     'Cloud Security Engineer',
   ],
-  tagline:
-    'IT Support & Security Analyst at Log(N) Pacific. Security+ and AZ-104 certified, finishing a B.S. in Computer Science.',
+  /** Current position, shown as metadata rather than repeated in prose. */
+  role: 'IT Support & Security Analyst',
+  company: 'Log(N) Pacific',
+  /**
+   * The one sentence in the hero. Deliberately carries no credentials, since
+   * the chips below it own that job. Prose narrates, chips prove.
+   */
   summary:
     'I keep Windows fleets running and locked down, I build the cloud infrastructure they live in, and I automate who gets access to it.',
 };
+
+/**
+ * The hero's credential chips. These are the only place credentials appear
+ * above the fold, so nothing is stated twice.
+ */
+export const heroCredentials: Array<{
+  label: string;
+  status: 'held' | 'in-progress';
+  note?: string;
+}> = [
+  { label: 'CompTIA Security+', status: 'held' },
+  { label: 'AZ-104 Azure Administrator', status: 'held' },
+  { label: 'B.S. Computer Science', status: 'in-progress', note: 'expected 2027' },
+];
 
 /** Headline numbers from the Log(N) Pacific role. Shown as a proof strip under the hero. */
 export const stats = [

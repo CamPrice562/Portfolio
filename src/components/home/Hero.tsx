@@ -1,8 +1,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Terminal, Shield, Code, Zap } from 'lucide-react';
-import { profile } from '@/data/portfolio';
+import { ArrowRight, Terminal, Shield, Code, Zap, BadgeCheck, CircleDashed } from 'lucide-react';
+import { profile, heroCredentials } from '@/data/portfolio';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,8 +13,6 @@ const Hero = () => {
   const imageRef = useRef<HTMLDivElement>(null);
 
   const words = profile.titles;
-
-  const credentials = ['CompTIA Security+', 'AZ-104', 'B.S. Computer Science'];
 
   // Typing animation effect
   useEffect(() => {
@@ -81,8 +79,8 @@ const Hero = () => {
           transition: 'transform 0.5s ease-out'
         }}
       ></div>
-      <div 
-        className="absolute inset-0 bg-hero-glow z-0"
+      <div
+        className="absolute inset-0 ambient-glow dither z-0"
         style={{
           transform: `translateY(${scrollY * 0.03}px)`,
           transition: 'transform 0.5s ease-out'
@@ -121,29 +119,48 @@ const Hero = () => {
               </p>
             </div>
             
+            {/* Current position, as quiet metadata. Answers "who is this"
+                without competing with the sentence below it. */}
+            <p className="mt-3 text-xs sm:text-sm text-gray-500">
+              {profile.role} at <span className="text-gray-300">{profile.company}</span>
+            </p>
+
+            {/* The one sentence worth reading. Carries no credentials. */}
             <p
-              className="mt-4 sm:mt-6 text-sm sm:text-base lg:text-lg text-gray-300 max-w-lg mx-auto lg:mx-0"
+              className="mt-5 sm:mt-6 text-base sm:text-lg text-gray-300 max-w-lg mx-auto lg:mx-0 leading-relaxed"
               style={{
                 transform: `translateY(${scrollY * 0.08}px)`,
                 transition: 'transform 0.5s ease-out'
               }}
             >
-              {profile.tagline}
-            </p>
-
-            <p className="mt-3 text-sm sm:text-base text-gray-400 max-w-lg mx-auto lg:mx-0">
               {profile.summary}
             </p>
 
-            <div className="mt-5 flex flex-wrap gap-2 justify-center lg:justify-start">
-              {credentials.map((credential) => (
-                <span
-                  key={credential}
-                  className="px-3 py-1 text-xs rounded-md border border-cyber-purple/30 bg-cyber-purple/10 text-cyber-purple"
-                >
-                  {credential}
-                </span>
-              ))}
+            {/* Credentials live only here. Held and in-progress are styled
+                differently so the row carries information, not just decoration. */}
+            <div className="mt-6 flex flex-wrap gap-2 justify-center lg:justify-start">
+              {heroCredentials.map((credential) => {
+                const held = credential.status === 'held';
+                const Icon = held ? BadgeCheck : CircleDashed;
+
+                return (
+                  <span
+                    key={credential.label}
+                    title={held ? 'Certification held' : 'In progress'}
+                    className={`inline-flex items-center gap-1.5 pl-2 pr-2.5 py-1 text-xs rounded-md border ${
+                      held
+                        ? 'border-cyber-purple/40 bg-cyber-purple/10 text-cyber-purple'
+                        : 'border-dashed border-gray-700 text-gray-400'
+                    }`}
+                  >
+                    <Icon size={13} className={held ? '' : 'text-gray-600'} />
+                    {credential.label}
+                    {credential.note && (
+                      <span className="text-gray-600">{credential.note}</span>
+                    )}
+                  </span>
+                );
+              })}
             </div>
 
             <div
@@ -188,7 +205,7 @@ const Hero = () => {
                   transition: 'transform 0.5s ease-out'
                 }}
               >
-                <div className="w-full h-full bg-gradient-to-br from-cyber-purple/30 to-cyber-green/30 blur-xl rounded-full"></div>
+                <div className="w-full h-full rounded-full blur-2xl bg-[radial-gradient(circle_at_50%_50%,rgba(20,184,166,0.42)_0%,rgba(20,184,166,0.26)_45%,rgba(20,184,166,0.08)_72%,rgba(20,184,166,0)_100%)]"></div>
               </div>
               {/* Image container with blob border-radius and outline */}
               <div 

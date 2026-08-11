@@ -20,7 +20,7 @@ const Projects = () => {
     <div className="min-h-screen bg-cyber-dark">
       <div className="pt-24 pb-16 bg-cyber-darker relative overflow-hidden">
         <div className="absolute inset-0 cyber-grid opacity-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-cyber-dark"></div>
+        <div className="absolute inset-0 header-fade dither"></div>
 
         <div className="cyber-container relative z-10">
           <h1 className="font-tech text-4xl md:text-5xl font-bold text-white mb-4 text-center">

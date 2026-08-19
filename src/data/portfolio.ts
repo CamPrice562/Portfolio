@@ -24,9 +24,6 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/cameronprice562/',
   /** Rotating titles in the hero, matched to the four target role types. */
   titles: [
-    'IT Support Specialist',
-    'Cloud Engineer',
-    'IAM Analyst',
     'Cloud Security Engineer',
   ],
   /** Current position, shown as metadata rather than repeated in prose. */
@@ -37,7 +34,7 @@ export const profile = {
    * the chips below it own that job. Prose narrates, chips prove.
    */
   summary:
-    'I keep Windows fleets running and locked down, I build the cloud infrastructure they live in, and I automate who gets access to it.',
+    'I help people with tech solutions by keeping fleets running securely, building reliable cloud infrastructure, and automating access.',
 };
 
 /**

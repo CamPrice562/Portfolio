@@ -41,10 +41,10 @@ const About = () => {
 
           <div className="space-y-5 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
             <p className="text-gray-300 text-lg">
-              I'm a Cloud Security Engineer focused on bridging the gap between infrastructure and identity. At Log(N) Pacific, I secure endpoints, manage vulnerabilities, and triage live SOC alerts—building a resilient foundation across the entire IT landscape. I thrive on engineering solutions that keep systems locked down and users seamlessly connected.
+              I'm a Cloud Security Engineer focused on bridging the gap between infrastructure and security. At Log(N) Pacific, I secure endpoints, manage vulnerabilities, and triage live SOC alerts—building a resilient foundation across the entire IT landscape. I thrive on engineering solutions that keep systems locked down and users seamlessly connected.
             </p>
             <p className="text-gray-300 text-lg">
-              My core focus is multi-cloud identity. Backed by CompTIA Security+ and Azure Administrator certifications, I’m building a comprehensive IAM portfolio across Microsoft Entra and AWS. I believe in proving my skills with test-driven code and CI/CD pipelines, because true security is built, not just clicked. 
+              My core focus is securing cloud environments. Backed by CompTIA Security+ and Azure Administrator certifications, I’m building a comprehensive Cloud Security Engineer portfolio across Microsoft Entra and AWS. I believe in proving my skills with test-driven code and CI/CD pipelines, because true security is built, not just clicked. 
             </p>
             <p className="text-gray-300 text-lg">
               Based in Long Beach, CA, and completing my B.S. in Computer Science (SNHU 2027), I bring a builder's mindset and a relentless drive to secure and streamline tech ecosystems.

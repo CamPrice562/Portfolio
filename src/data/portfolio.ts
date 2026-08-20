@@ -256,7 +256,7 @@ export interface RoadmapItem {
 }
 
 /**
- * The 12-project multi-cloud IAM portfolio. Each ships a real repo with a
+ * The 12-project Cloud Security Engineer portfolio. Each ships a real repo with a
  * README, architecture diagram, tests, and CI, plus a narrated demo video.
  */
 export const roadmap: RoadmapItem[] = [

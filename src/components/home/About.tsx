@@ -41,20 +41,13 @@ const About = () => {
 
           <div className="space-y-5 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
             <p className="text-gray-300 text-lg">
-              I work as an IT Support &amp; Security Analyst at Log(N) Pacific, where the job runs the full width of an IT
-              team. On any given week I am hardening Windows endpoints, running authenticated vulnerability scans across
-              server assets, writing detection rules, and working live alerts out of the SOC queue. That range is
-              deliberate. I wanted to learn how the pieces actually connect before specializing.
+              I'm a Cloud Security Engineer focused on bridging the gap between infrastructure and identity. At Log(N) Pacific, I secure endpoints, manage vulnerabilities, and triage live SOC alerts—building a resilient foundation across the entire IT landscape. I thrive on engineering solutions that keep systems locked down and users seamlessly connected.
             </p>
             <p className="text-gray-300 text-lg">
-              The direction I am heading is cloud identity. I hold CompTIA Security+ and the Azure Administrator
-              Associate certification, I am studying for SC-300, and I am building out a twelve-project multi-cloud IAM
-              portfolio across Microsoft Entra and AWS. Each project ships as a real repo with tests and CI rather than a
-              set of portal screenshots, because I would rather show work that runs than work that was clicked.
+              My core focus is multi-cloud identity. Backed by CompTIA Security+ and Azure Administrator certifications, I’m building a comprehensive IAM portfolio across Microsoft Entra and AWS. I believe in proving my skills with test-driven code and CI/CD pipelines, because true security is built, not just clicked. 
             </p>
             <p className="text-gray-300 text-lg">
-              I finish my B.S. in Computer Science at Southern New Hampshire University in early 2027, and I am based in
-              Long Beach, California.
+              Based in Long Beach, CA, and completing my B.S. in Computer Science (SNHU 2027), I bring a builder's mindset and a relentless drive to secure and streamline tech ecosystems.
             </p>
           </div>
         </div>

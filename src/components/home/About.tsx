@@ -41,13 +41,13 @@ const About = () => {
 
           <div className="space-y-5 animate-on-scroll opacity-0 translate-y-10 transition-all duration-700 delay-100">
             <p className="text-gray-300 text-lg">
-              I'm a Cloud Security Engineer focused on bridging the gap between infrastructure and security. At Log(N) Pacific, I secure endpoints, manage vulnerabilities, and triage live SOC alerts—building a resilient foundation across the entire IT landscape. I thrive on engineering solutions that keep systems locked down and users seamlessly connected.
+              I am a customer-first service desk and end-user computing professional serving as the first point of contact for 200+ users across Windows 10/11 and macOS at Log(N) Pacific. Day to day, that means diagnosing hardware, software, and network issues, provisioning Active Directory accounts, resolving MFA and password lockouts, and keeping Microsoft 365, Teams, and VPN access running smoothly.
             </p>
             <p className="text-gray-300 text-lg">
-              My core focus is securing cloud environments. Backed by CompTIA Security+ and Azure Administrator certifications, I’m building a comprehensive Cloud Security Engineer portfolio across Microsoft Entra and AWS. I believe in proving my skills with test-driven code and CI/CD pipelines, because true security is built, not just clicked. 
+              I bring hands-on ServiceNow experience building Service Catalog requests, Flow Designer automation, assignment-group routing, and SLA definitions. What I cannot resolve immediately, I escalate with thorough, high-context documentation so the next engineer never starts from scratch.
             </p>
             <p className="text-gray-300 text-lg">
-              Based in Long Beach, CA, and completing my B.S. in Computer Science (SNHU 2027), I bring a builder's mindset and a relentless drive to secure and streamline tech ecosystems.
+              Backed by CompTIA Security+ and Azure Administrator (AZ-104) certifications, I bridge day-to-day service desk operations with cloud security engineering—automating endpoint baselines with PowerShell and triaging security alerts. Based in Long Beach, CA (Remote), and completing my B.S. in Computer Science at SNHU (March 2027).
             </p>
           </div>
         </div>

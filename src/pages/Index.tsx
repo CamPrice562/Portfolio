@@ -30,7 +30,7 @@ const Index = () => {
                 Featured <span className="text-glow">Projects</span>
               </h2>
               <p className="mt-2 text-gray-400">
-                Endpoint hardening, cloud vulnerability management, and multi-cloud identity.
+                ServiceNow automation, endpoint configuration, cloud vulnerability management, and identity.
               </p>
             </div>
 
@@ -59,7 +59,7 @@ const Index = () => {
             Looking for someone who can <span className="text-glow">support it and secure it</span>?
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            I am open to IT support, cloud engineering, identity, and cloud security roles. Long Beach, California, or
+            I am open to End User Computing, Service Desk, IT Support, and Cloud Security roles. Long Beach, California, or
             remote.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

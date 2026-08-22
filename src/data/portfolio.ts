@@ -17,24 +17,26 @@ export type Track = (typeof TRACKS)[number];
 
 export const profile = {
   name: 'Cameron Price',
-  location: 'Long Beach, CA',
+  location: 'Long Beach, CA (Remote)',
   email: 'cameronjordanprice562@yahoo.com',
   phone: '562-253-3505',
   github: 'https://github.com/CamPrice562',
   linkedin: 'https://www.linkedin.com/in/cameronprice562/',
-  /** Rotating titles in the hero, matched to the four target role types. */
+  /** Rotating titles in the hero, matched to target role types. */
   titles: [
+    'End User Computing I',
+    'Service Desk',
     'Cloud Security Engineer',
   ],
   /** Current position, shown as metadata rather than repeated in prose. */
-  role: 'IT Support & Security Analyst',
+  role: 'IT Support & Security Analyst Intern',
   company: 'Log(N) Pacific',
   /**
    * The one sentence in the hero. Deliberately carries no credentials, since
    * the chips below it own that job. Prose narrates, chips prove.
    */
   summary:
-    'I help people with tech solutions by keeping fleets running securely, building reliable cloud infrastructure, and automating access.',
+    'Customer-first service desk professional and first point of contact for 200+ end users across Windows 10/11 and macOS, managing incidents, access control, and ServiceNow automation.',
 };
 
 /**
@@ -46,8 +48,8 @@ export const heroCredentials: Array<{
   status: 'held' | 'in-progress';
   note?: string;
 }> = [
-  { label: 'CompTIA Security+', status: 'held' },
   { label: 'AZ-104 Azure Administrator', status: 'held' },
+  { label: 'CompTIA Security+', status: 'held' },
   { label: 'B.S. Computer Science', status: 'in-progress', note: 'expected 2027' },
 ];
 
@@ -55,18 +57,18 @@ export const heroCredentials: Array<{
 export const stats = [
   {
     value: '200+',
-    label: 'Endpoints hardened',
-    detail: 'Windows 10/11 systems brought to DISA STIG baselines',
+    label: 'Endpoints supported',
+    detail: 'Windows 10/11 & macOS systems supported, hardened, and maintained',
+  },
+  {
+    value: '10+',
+    label: 'PowerShell scripts',
+    detail: 'Automating Windows 11 configuration and security baselines',
   },
   {
     value: '80%',
     label: 'Vulnerability reduction',
     detail: '100% of critical and 90% of high-severity findings closed',
-  },
-  {
-    value: '100%',
-    label: 'Brute-force drop',
-    detail: 'Internet-facing brute-force incidents eliminated',
   },
   {
     value: '1st',
@@ -77,58 +79,52 @@ export const stats = [
 
 export const skillGroups = [
   {
-    name: 'Support & Endpoint',
+    name: 'Service Desk Operations',
     track: 'IT Support' as Track,
     skills: [
-      'Windows 10/11',
-      'macOS',
-      'Linux (Ubuntu, Kali)',
-      'Active Directory',
-      'Ticket triage & escalation',
-      'Hardware troubleshooting',
-      'Imaging & deployment',
-      'End-user documentation',
+      'Incident & Request Lifecycle',
+      'ServiceNow (Service Catalog, Flow Designer)',
+      'Assignment-Group Routing & SLA Definitions',
+      'Tier 2/3 Escalation',
+      'Phone, Email, Chat & Ticketing Intake',
+      'Microsoft Sentinel & Defender XDR Queues',
+      'Knowledge Base Documentation',
     ],
   },
   {
-    name: 'Cloud & Infrastructure',
-    track: 'Cloud Engineering' as Track,
+    name: 'End-User Support & Hardware',
+    track: 'IT Support' as Track,
     skills: [
-      'Microsoft Azure',
-      'AWS',
-      'Azure Virtual Machines',
-      'Network Security Groups',
-      'Terraform',
-      'Git & GitHub Actions',
-      'VMware / VirtualBox',
+      'Windows 10/11 & macOS Troubleshooting',
+      'Hardware Diagnostics & Repair',
+      'Imaging & Deployment',
+      'Mobile Devices',
+      'Printers & Peripherals',
+      'Remote & In-Person Support',
     ],
   },
   {
-    name: 'Identity & Access',
+    name: 'Identity & Access Management',
     track: 'Identity & Access' as Track,
     skills: [
+      'Active Directory Provisioning / Deprovisioning',
+      'Password Resets & MFA Troubleshooting',
+      'Security Group Membership & Access Control',
+      'Group Policy (GPO)',
       'Microsoft Entra ID',
-      'AWS IAM Identity Center',
-      'Conditional Access',
-      'SAML & SCIM federation',
-      'Privileged Identity Management',
-      'Joiner/Mover/Leaver lifecycle',
-      'Microsoft Graph API',
     ],
   },
   {
-    name: 'Security Operations & Automation',
-    track: 'Security Operations' as Track,
+    name: 'Collaboration, Cloud & Security',
+    track: 'Cloud Engineering' as Track,
     skills: [
-      'Microsoft Sentinel',
-      'KQL / Advanced Hunting',
-      'Defender for Endpoint',
-      'Tenable',
-      'MITRE ATT&CK',
-      'DISA STIGs',
-      'PowerShell',
+      'Microsoft 365, Teams & Exchange/Outlook',
+      'VPN & Remote Access',
+      'Microsoft Azure (VMs, Entra ID)',
+      'Microsoft Defender for Endpoint & KQL',
+      'PowerShell (10+ deployed scripts)',
       'Python',
-      'Wireshark',
+      'Network Security Fundamentals',
     ],
   },
 ];
@@ -136,24 +132,24 @@ export const skillGroups = [
 export const certifications = {
   held: [
     {
-      name: 'CompTIA Security+',
-      issuer: 'CompTIA',
-      note: 'Satisfies the DoD 8140 baseline for cyber defense work roles 511, 521, and 531',
-    },
-    {
       name: 'Microsoft Certified: Azure Administrator Associate (AZ-104)',
       issuer: 'Microsoft',
-      note: 'Passed August 2026',
+      note: 'Cloud identity, RBAC, and infrastructure administration',
     },
     {
-      name: 'Computer Hardware Technician',
+      name: 'CompTIA Security+',
+      issuer: 'CompTIA',
+      note: 'Security fundamentals, access control, incident response',
+    },
+    {
+      name: 'Computer Hardware Technician Certificate',
       issuer: 'Long Beach City College',
-      note: 'Certificate of Achievement',
+      note: 'Certificate of Achievement · LBCC | IT Essentials, Cisco Networking Academy',
     },
     {
       name: 'IT Essentials',
       issuer: 'Cisco Networking Academy',
-      note: '',
+      note: 'Hardware, software & networking essentials',
     },
     {
       name: 'Microsoft Technology Associate: JavaScript Fundamentals',
@@ -166,11 +162,6 @@ export const certifications = {
       name: 'SC-300: Identity and Access Administrator',
       issuer: 'Microsoft',
       note: 'Next up',
-    },
-    {
-      name: 'AZ-500: Azure Security Engineer',
-      issuer: 'Microsoft',
-      note: 'Planned',
     },
   ],
 };
@@ -187,10 +178,36 @@ export interface Project {
   details: string;
   link?: string;
   /** Chooses the generated cover artwork. */
-  cover: 'identity' | 'shield' | 'hunt' | 'terminal' | 'cloud';
+  cover: 'identity' | 'shield' | 'hunt' | 'terminal' | 'cloud' | 'workflow';
 }
 
 export const projects: Project[] = [
+  {
+    id: 'servicenow-employee-lifecycle',
+    title: 'Employee Lifecycle Automation (ServiceNow)',
+    description:
+      'Service Catalog request and Flow Designer automation routing onboarding IT tasks to three assignment groups with SLA tracking.',
+    metric: '3 assignment groups automated, real-time SLA tracking',
+    tracks: ['IT Support', 'Identity & Access'],
+    tech: ['ServiceNow', 'Flow Designer', 'Service Catalog', 'ITSM', 'SLA Definitions'],
+    details:
+      'Replaced a manual onboarding email chain, where setup steps routinely went unowned, with a Service Catalog request and Flow Designer automation that generates and routes IT tasks to three assignment groups in real time, with an SLA anchored to the employee start date. Diagnosed a platform scripting failure by tracing execution in ServiceNow Flow Context, isolating a null-reference root cause the builder interface had reported as successful.',
+    link: 'https://github.com/CamPrice562/servicenow-employee-lifecycle',
+    cover: 'workflow',
+  },
+  {
+    id: 'stigs',
+    title: 'Windows System Configuration Automation',
+    description:
+      'Idempotent PowerShell scripts that automate Windows 11 endpoint configuration, DISA STIG hardening, and registry management.',
+    metric: '10+ scripts, 200+ endpoints in production',
+    tracks: ['IT Support', 'Security Operations'],
+    tech: ['PowerShell', 'Windows 11', 'DISA STIG v2r6', 'Registry Automation'],
+    details:
+      'Wrote 10+ idempotent PowerShell scripts automating Windows 11 endpoint configuration and hardening, reusable across systems in varying baseline states. A repo covering account lockout policy, guest account access, UAC configuration, telemetry restriction, and network security settings. Each one is idempotent and can run individually or as a pipeline, so it produces the same result whether the machine starts compliant, half-configured, or untouched.',
+    link: 'https://github.com/CamPrice562/STIGS',
+    cover: 'terminal',
+  },
   {
     id: 'multi-cloud-identity-baseline',
     title: 'Multi-Cloud Identity Baseline',
@@ -216,19 +233,6 @@ export const projects: Project[] = [
       'I built the program end to end rather than just running scans: authored the policy document, ran a simulated change advisory board to get remediation approved, automated the patching with PowerShell, and tracked findings through to verified closure. Total vulnerabilities fell 80%, including every critical finding and 90% of high-severity ones.',
     link: 'https://github.com/CamPrice562/vulnerability-management',
     cover: 'shield',
-  },
-  {
-    id: 'stigs',
-    title: 'Windows Endpoint Hardening Automation',
-    description:
-      'Idempotent PowerShell scripts that bring a Windows 11 machine to DISA STIG v2r6 compliance and keep it there.',
-    metric: '10+ controls, 200+ endpoints in production',
-    tracks: ['IT Support', 'Security Operations'],
-    tech: ['PowerShell', 'Windows 11', 'DISA STIG v2r6'],
-    details:
-      'A repo of 10+ scripts covering account lockout policy, guest account access, UAC configuration, telemetry restriction, and network security settings. Each one is idempotent and can run individually or as a pipeline, so it produces the same result whether the machine starts compliant, half-configured, or untouched. These are the same scripts I use on 200+ endpoints at work.',
-    link: 'https://github.com/CamPrice562/STIGS',
-    cover: 'terminal',
   },
   {
     id: 'threat-hunts',
@@ -349,18 +353,22 @@ export const roadmap: RoadmapItem[] = [
 
 export const experience = [
   {
-    title: 'IT Support & Security Analyst',
+    title: 'IT Support & Security Analyst Intern',
     company: 'Log(N) Pacific',
     location: 'Long Beach, CA',
     period: 'March 2026 – Present',
     description:
-      'Supporting and hardening a Windows fleet while running vulnerability management and live SOC alert triage across the same environment.',
+      'First point of contact for 200+ end users across Windows 10/11 and macOS, managing incident triage, identity & access, M365 support, endpoint automation, and security monitoring.',
     achievements: [
-      'Hardened 200+ Windows 10/11 endpoints to DISA STIG baselines using 10 self-written PowerShell scripts covering account lockout, guest access, and telemetry controls.',
-      'Ran the full vulnerability lifecycle across 200+ server assets in Tenable: authenticated scans, CVSS triage, remediation tickets, patch coordination, and closure tracking.',
-      'Monitored Microsoft Sentinel with KQL Advanced Hunting across thousands of daily log events, investigating indicators of lateral movement, exfiltration, and credential abuse.',
-      'Authored Defender for Endpoint detection rules and NSG firewall policy changes that eliminated internet-facing brute-force incidents entirely.',
-      'Triaged live alerts from an 18-ticket SOC queue, classified each as true, false, or benign positive, mapped findings to MITRE ATT&CK, and documented them in Defender XDR.',
+      'Serve as first point of contact for 200+ end users, taking IT support requests by phone, email, and ticketing system, then diagnosing and resolving hardware, software, and network issues across Windows 10/11 and macOS devices.',
+      'Handle identity and access requests daily: Active Directory account provisioning and deprovisioning, password resets, MFA troubleshooting, security group membership, and access control changes.',
+      'Log, prioritize, and manage incidents and service requests through resolution, escalating to senior engineering with written summaries complete enough to be picked up without a handoff call.',
+      'Act as a go-to resource for teammates and non-technical users on Microsoft Azure, virtual machine provisioning, and Tenable configuration, explaining each step in plain language so the fix sticks instead of returning as a repeat ticket.',
+      'Support Microsoft 365, Teams, Exchange and Outlook, and VPN connectivity, including mailbox and license provisioning and remote access troubleshooting for off-site users.',
+      'Troubleshoot and repair endpoint hardware, printers, and peripherals; image, configure, and deploy replacement systems to a consistent standard.',
+      'Cut manual setup time by automating recurring Windows configuration and security-baseline tasks with 10 self-written PowerShell scripts, removing error-prone manual registry edits from the process.',
+      'Coordinate with infrastructure and application teams to schedule, communicate, and validate patch deployments, tracking remediation status to closure across all managed systems.',
+      'Monitor security alerts in Microsoft Sentinel using KQL and investigate in Defender XDR; authored Microsoft Defender for Endpoint detection rules that eliminated recurring brute-force sign-in incidents.',
     ],
   },
 ];
@@ -393,11 +401,22 @@ export const education = [
     degree: 'A.S. Computer Science',
     institution: 'Long Beach City College',
     year: 'Completed',
-    details: 'Long Beach, CA',
+    details: 'Long Beach, CA · Cybersecurity Club Member',
   },
 ];
 
 export const activities = [
+  {
+    name: 'Online IT Practitioner Community',
+    role: 'Peer Support Contributor',
+    year: 'Ongoing',
+    description:
+      'Community peer support on Microsoft Azure, virtual machine provisioning, and enterprise security tooling.',
+    achievements: [
+      'Provide technical guidance and troubleshooting assistance on Azure VM setups and security tool configurations.',
+      'Explain complex troubleshooting steps in plain language to help junior practitioners resolve issues effectively.',
+    ],
+  },
   {
     name: 'Log(N) Pacific Threat Hunt Range',
     role: 'Hunter',
@@ -411,6 +430,13 @@ export const activities = [
     ],
   },
   {
+    name: 'Cybersecurity Club',
+    role: 'Member',
+    year: 'August 2025 – Present',
+    description:
+      'Long Beach City College. Group labs, capture-the-flag practice, and peer study for security certifications.',
+  },
+  {
     name: 'National Cyber League',
     role: 'Competitor',
     year: 'Ongoing',
@@ -420,13 +446,6 @@ export const activities = [
       'Completed advanced challenges in OSINT, cryptography, and network traffic analysis.',
       'Used Wireshark and command-line tooling for packet and log analysis under time pressure.',
     ],
-  },
-  {
-    name: 'Cybersecurity Club',
-    role: 'Member',
-    year: 'August 2025 – Present',
-    description:
-      'Long Beach City College. Group labs, capture-the-flag practice, and peer study for security certifications.',
   },
 ];
 

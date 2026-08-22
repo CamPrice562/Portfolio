@@ -114,6 +114,23 @@ const variants: Record<Project['cover'], React.ReactNode> = {
       <path d="M120 78v14" stroke={TEAL} strokeWidth="1.5" strokeDasharray="3 3" opacity="0.6" />
     </>
   ),
+
+  /** Automated workflow: intake trigger routing to three assignment nodes. */
+  workflow: (
+    <>
+      <rect x="28" y="52" width="44" height="24" rx="4" fill="none" stroke={TEAL} strokeWidth="1.5" opacity="0.8" />
+      <path d="M38 64h24" stroke={TEAL} strokeWidth="1.5" opacity="0.6" />
+      <path d="M72 64h20" stroke={TEAL} strokeWidth="1.5" opacity="0.7" />
+      <path d="M92 64v-28h24M92 64h24M92 64v28h24" stroke={TEAL} strokeWidth="1.5" strokeDasharray="3 3" opacity="0.8" />
+      <rect x="116" y="24" width="88" height="22" rx="3" fill="none" stroke={TEAL} strokeWidth="1.5" opacity="0.75" />
+      <rect x="116" y="53" width="88" height="22" rx="3" fill="none" stroke={TEAL} strokeWidth="1.5" opacity="0.95" />
+      <rect x="116" y="82" width="88" height="22" rx="3" fill="none" stroke={TEAL} strokeWidth="1.5" opacity="0.75" />
+      <circle cx="126" cy="35" r="3" fill={TEAL} opacity="0.7" />
+      <circle cx="126" cy="64" r="3" fill={TEAL} />
+      <circle cx="126" cy="93" r="3" fill={TEAL} opacity="0.7" />
+      <path d="M136 35h56M136 64h56M136 93h56" stroke={TEAL} strokeWidth="1.5" opacity="0.4" />
+    </>
+  ),
 };
 
 const ProjectCover: React.FC<CoverProps> = ({ variant, className = '' }) => {

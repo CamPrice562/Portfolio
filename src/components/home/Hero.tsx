@@ -87,24 +87,14 @@ const Hero = () => {
             </h1>
 
             {/*
-              The pitch. All four target roles shown at once and always, rather
-              than cycled one at a time, so a visitor knows in a single glance
-              what Cameron is offering.
+              The pitch: one line, one claim. A single discipline reads as
+              deliberate, where a list of roles reads as undecided.
             */}
-            <ul className="mt-4 sm:mt-5 flex flex-wrap gap-x-2 gap-y-1 justify-center lg:justify-start text-sm sm:text-base font-medium text-cyber-purple">
-              {profile.titles.map((title, index) => (
-                <li key={title} className="flex items-center gap-2">
-                  <span>{title}</span>
-                  {index < profile.titles.length - 1 && (
-                    <span aria-hidden="true" className="text-cyber-purple/30">
-                      /
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ul>
+            <p className="mt-4 sm:mt-5 text-lg sm:text-xl font-medium text-cyber-purple">
+              {profile.headline}
+            </p>
 
-            {/* What those four roles actually mean in practice. One clause per
+            {/* What that discipline actually means in practice. One clause per
                 discipline above, in the same order. */}
             <p
               className="mt-5 text-base sm:text-lg text-gray-300 max-w-lg mx-auto lg:mx-0 leading-relaxed"
@@ -117,9 +107,11 @@ const Hero = () => {
             </p>
 
             {/* Where he is now, plus proof. Quiet metadata, not a headline. */}
+            {/* nowrap on the employer keeps the line from breaking mid-name and
+                leaving a single orphaned word on its own row. */}
             <p className="mt-5 text-xs sm:text-sm text-gray-500">
               Currently {profile.role} at{' '}
-              <span className="text-gray-300">{profile.company}</span>
+              <span className="text-gray-300 whitespace-nowrap">{profile.company}</span>
             </p>
 
             {/* Credentials live only here. Held and in-progress are styled

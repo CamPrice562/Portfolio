@@ -22,12 +22,15 @@ export const profile = {
   phone: '562-253-3505',
   github: 'https://github.com/CamPrice562',
   linkedin: 'https://www.linkedin.com/in/cameronprice562/',
-  /** Rotating titles in the hero, matched to target role types. */
-  titles: [
-    'End User Computing I',
-    'Service Desk',
-    'Cloud Security Engineer',
-  ],
+  /**
+   * The single positioning line under the name.
+   *
+   * Deliberately a discipline, not a job title. Naming a specific role
+   * ("Analyst", "Engineer") would narrow the doors this opens, and the entry
+   * point is still open. This phrasing reads as a fit for help desk, desktop
+   * support, sysadmin, cloud, and security postings alike.
+   */
+  headline: 'IT Support & Cloud Security',
   /** Current position, shown as metadata rather than repeated in prose. */
   role: 'IT Support & Security Analyst Intern',
   company: 'Log(N) Pacific',
